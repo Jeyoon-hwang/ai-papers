@@ -1,34 +1,40 @@
-# Affordance Vision System - Dependencies
+# Affordance Vision System - Isaac Gym Edition
+# GPU-accelerated physics-based affordance learning
 
-# Physics Simulation (NEW - PyBullet Environment)
-pybullet>=3.2.0             # Physics simulation for affordance learning
-
-# Core Vision
-opencv-python>=4.8.0        # Webcam and image processing
-numpy>=1.24.0               # Numerical computing
+# Core Physics Simulation (Primary)
+isaacgym>=4.0.0            # NVIDIA Isaac Gym (GPU-accelerated physics)
+                           # See ISAAC_GYM_SETUP.md for installation
 
 # Deep Learning
-torch>=2.0.0                # Deep learning framework (CPU/GPU)
-torchvision>=0.15.0         # Vision model library
+torch>=2.0.0               # Deep learning framework
+torchvision>=0.15.0        # Vision models
+tensorboard>=2.13.0        # Training visualization
+
+# Core Vision
+opencv-python>=4.8.0       # Image processing
+numpy>=1.24.0              # Numerical computing
+Pillow>=10.0.0             # Image utilities
 
 # Data & Analysis
-scipy>=1.11.0               # Scientific computing
-pandas>=2.0.0               # Data manipulation
+scipy>=1.11.0              # Scientific computing
+pandas>=2.0.0              # Data manipulation
+pyyaml>=6.0.0              # Config files
 
-# Utilities
-Pillow>=10.0.0              # Image processing
-pyyaml>=6.0.0               # Config files
+# Development
+pytest>=7.4.0              # Testing
+black>=23.9.0              # Code formatting
+flake8>=6.0.0              # Linting
+mypy>=1.5.0                # Type checking
+tqdm>=4.65.0               # Progress bars
 
-# Development & Testing
-pytest>=7.4.0               # Testing framework
-black>=23.9.0               # Code formatting
-flake8>=6.0.0               # Linting
-mypy>=1.5.0                 # Type checking
+# Visualization
+matplotlib>=3.8.0          # Plotting
+seaborn>=0.12.0            # Statistical visualization
 
-# Visualization & Analysis
-matplotlib>=3.8.0           # Plotting
-seaborn>=0.12.0             # Statistical visualization
+# Optional: For Ego4D transfer evaluation
+# ego4d-cli  (download from Ego4D website)
 
 # Notes:
-# PyBullet provides physics-based affordance testing
-# Usage: from pybullet_environment import AffordanceEnvironment
+# - Isaac Gym requires NVIDIA GPU + CUDA
+# - See ISAAC_GYM_SETUP.md for complete setup guide
+# - Expected: 500K frames in ~5-10 minutes
