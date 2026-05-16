@@ -1,0 +1,51 @@
+
+═══════════════════════════════════════════════════════════════════════════════
+OBJECT AFFORDANCE ANALYSIS CONTEXT (Real Data)
+═══════════════════════════════════════════════════════════════════════════════
+
+Object: plastic_bottle (variant 00)
+Category: container
+Data Source: PyBullet Physics Simulation
+
+───────────────────────────────────────────────────────────────────────────────
+AFFORDANCE SCORES (6-dimensional capability vector)
+───────────────────────────────────────────────────────────────────────────────
+
+- sittable: 0.094\n   - pushable: 0.782\n   - climbable: 0.093\n   - breakable: 0.295\n   - holdable: 0.875\n   - stackable: 0.320
+
+───────────────────────────────────────────────────────────────────────────────
+NATURAL LANGUAGE INTERPRETATION
+───────────────────────────────────────────────────────────────────────────────
+
+This object is not sittable (0.09), moderately pushable (0.78), not climbable (0.09), not breakable (0.29), highly holdable (0.87), not stackable (0.32).
+
+───────────────────────────────────────────────────────────────────────────────
+ESTIMATED PHYSICAL PROPERTIES
+───────────────────────────────────────────────────────────────────────────────
+
+Weight estimate: moderate weight (1-5 kg), durable (metal, hard plastic)
+
+───────────────────────────────────────────────────────────────────────────────
+CONFIDENCE & UNCERTAINTY ANALYSIS
+───────────────────────────────────────────────────────────────────────────────
+
+Primary Affordance: HOLDABLE
+Confidence Margin: 0.0931
+Ambiguity Score: 0.9069
+
+📋 RECOMMENDATION: LOW CONFIDENCE: multiple affordances equally viable, proceed cautiously
+
+───────────────────────────────────────────────────────────────────────────────
+TASK FOR LLM
+───────────────────────────────────────────────────────────────────────────────
+
+Based on the multi-modal context above, provide:
+
+1. What actions can a robot safely perform with this object?
+2. Which affordances are most reliable for robot decision-making?
+3. What safety constraints should the robot observe?
+4. What are the recommended robotic manipulation strategies?
+5. If ambiguity is high, what additional context would help?
+
+Generate a brief, actionable response for robot planning.
+═══════════════════════════════════════════════════════════════════════════════

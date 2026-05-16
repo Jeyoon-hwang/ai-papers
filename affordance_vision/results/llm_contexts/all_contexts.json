@@ -1,0 +1,1713 @@
+{
+  "total_samples": 990,
+  "affordance_names": [
+    "sittable",
+    "pushable",
+    "climbable",
+    "breakable",
+    "holdable",
+    "stackable"
+  ],
+  "samples": {
+    "wooden_chair_00": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9060097581325308,
+        "pushable": 0.698181585275744,
+        "climbable": 0.43407470568862633,
+        "breakable": 0.1471731447055757,
+        "holdable": 0.2177645126342024,
+        "stackable": 0.8696921277954988
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.03631763033703206,
+        "ambiguity_score": 0.9636823696629679
+      }
+    },
+    "wooden_chair_01": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8569964272015982,
+        "pushable": 0.4621117815585702,
+        "climbable": 0.3282991221477454,
+        "breakable": 0.0927628970745042,
+        "holdable": 0.3803644946970756,
+        "stackable": 0.7648037333722094
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.09219269382938877,
+        "ambiguity_score": 0.9078073061706112
+      }
+    },
+    "wooden_chair_02": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.7950995119814349,
+        "pushable": 0.6425985089109812,
+        "climbable": 0.3123577093159866,
+        "breakable": 0.13036237026842995,
+        "holdable": 0.18344777211384966,
+        "stackable": 0.8285642251404705
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.03346471315903554,
+        "ambiguity_score": 0.9665352868409645
+      }
+    },
+    "wooden_chair_03": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9121109621042153,
+        "pushable": 0.5907701387767453,
+        "climbable": 0.4456866030558771,
+        "breakable": 0.20322905438308514,
+        "holdable": 0.1612294460283717,
+        "stackable": 0.8067783442024516
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.10533261790176363,
+        "ambiguity_score": 0.8946673820982364
+      }
+    },
+    "wooden_chair_04": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8442172475366734,
+        "pushable": 0.3303035035637971,
+        "climbable": 0.3043301638687846,
+        "breakable": 0.12251036233244275,
+        "holdable": 0.2128563305873329,
+        "stackable": 0.8614187569628793
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.017201509426205908,
+        "ambiguity_score": 0.9827984905737941
+      }
+    },
+    "wooden_chair_05": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9171577890559807,
+        "pushable": 0.5691487386382942,
+        "climbable": 0.2853067078405239,
+        "breakable": 0.27827044026712655,
+        "holdable": 0.36460240492095203,
+        "stackable": 0.8504692151646291
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.06668857389135152,
+        "ambiguity_score": 0.9333114261086485
+      }
+    },
+    "wooden_chair_06": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9117249775140477,
+        "pushable": 0.33439919509193566,
+        "climbable": 0.3639939431047233,
+        "breakable": 0.17868379225784572,
+        "holdable": 0.36660556782655157,
+        "stackable": 0.7336293189161496
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.1780956585978981,
+        "ambiguity_score": 0.8219043414021019
+      }
+    },
+    "wooden_chair_07": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8916567152055147,
+        "pushable": 0.5176352676439554,
+        "climbable": 0.4393880085291474,
+        "breakable": 0.12460567956812639,
+        "holdable": 0.49605342485694087,
+        "stackable": 0.7431902220066187
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.14846649319889604,
+        "ambiguity_score": 0.851533506801104
+      }
+    },
+    "wooden_chair_08": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8350602306885095,
+        "pushable": 0.6820950268021757,
+        "climbable": 0.22599404309541932,
+        "breakable": 0.25600341261602083,
+        "holdable": 0.2299279938698321,
+        "stackable": 0.8141031879776666
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.020957042710842977,
+        "ambiguity_score": 0.979042957289157
+      }
+    },
+    "wooden_chair_09": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8537222073723225,
+        "pushable": 0.43344936229475767,
+        "climbable": 0.3525500613727811,
+        "breakable": 0.1856391889468114,
+        "holdable": 0.6173016019571972,
+        "stackable": 0.5860483915926139
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.23642060541512533,
+        "ambiguity_score": 0.7635793945848747
+      }
+    },
+    "wooden_chair_10": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8107284113116172,
+        "pushable": 0.4150887658389553,
+        "climbable": 0.1461158890158858,
+        "breakable": 0.16674070604734165,
+        "holdable": 0.2414612462638625,
+        "stackable": 0.8933368398365316
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.08260842852491435,
+        "ambiguity_score": 0.9173915714750857
+      }
+    },
+    "wooden_chair_11": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8137160640675295,
+        "pushable": 0.607563532103762,
+        "climbable": 0.16544446594615286,
+        "breakable": 0.21923841136261274,
+        "holdable": 0.2757527498243019,
+        "stackable": 0.8577619974095162
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.0440459333419867,
+        "ambiguity_score": 0.9559540666580133
+      }
+    },
+    "wooden_chair_12": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8376592085701641,
+        "pushable": 0.30063043117895605,
+        "climbable": 0.18039687068859814,
+        "breakable": 0.11740115077789093,
+        "holdable": 0.3490436466921353,
+        "stackable": 0.5265274162584362
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.31113179231172783,
+        "ambiguity_score": 0.6888682076882722
+      }
+    },
+    "wooden_chair_13": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8594359237897333,
+        "pushable": 0.648152238917615,
+        "climbable": 0.3885276041789513,
+        "breakable": 0.11072335392161868,
+        "holdable": 0.6073409753988158,
+        "stackable": 0.7690317907831972
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.09040413300653616,
+        "ambiguity_score": 0.9095958669934638
+      }
+    },
+    "wooden_chair_14": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8936247286091303,
+        "pushable": 0.6027961956877599,
+        "climbable": 0.3175241370632263,
+        "breakable": 0.05816534193527978,
+        "holdable": 0.42301032580851927,
+        "stackable": 0.7275710750521508
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.16605365355697954,
+        "ambiguity_score": 0.8339463464430205
+      }
+    },
+    "wooden_chair_15": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8418387937182026,
+        "pushable": 0.5300139290584502,
+        "climbable": 0.34751442675974364,
+        "breakable": 0.2669764987447472,
+        "holdable": 0.4416016381634661,
+        "stackable": 0.7683646898318686
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.07347410388633402,
+        "ambiguity_score": 0.926525896113666
+      }
+    },
+    "wooden_chair_16": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.86587384684063,
+        "pushable": 0.5526189730689537,
+        "climbable": 0.17008300362260706,
+        "breakable": 0.0,
+        "holdable": 0.12184386397031544,
+        "stackable": 0.6298446524174063
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.23602919442322368,
+        "ambiguity_score": 0.7639708055767763
+      }
+    },
+    "wooden_chair_17": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8743732915292439,
+        "pushable": 0.622009480264824,
+        "climbable": 0.3303116113304494,
+        "breakable": 0.08327532533960931,
+        "holdable": 0.1724175856566057,
+        "stackable": 0.9536076388707131
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.07923434734146917,
+        "ambiguity_score": 0.9207656526585308
+      }
+    },
+    "wooden_chair_18": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8679594679445861,
+        "pushable": 0.5630095077441091,
+        "climbable": 0.3859275767708183,
+        "breakable": 0.24870763268693516,
+        "holdable": 0.556320556727094,
+        "stackable": 0.8700340220551953
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.0020745541106091947,
+        "ambiguity_score": 0.9979254458893908
+      }
+    },
+    "wooden_chair_19": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.807025533741443,
+        "pushable": 0.49531726547901067,
+        "climbable": 0.4096965556299625,
+        "breakable": 0.23824779090749415,
+        "holdable": 0.25162431681613223,
+        "stackable": 0.5981040133157075
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.20892152042573553,
+        "ambiguity_score": 0.7910784795742645
+      }
+    },
+    "wooden_chair_20": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8522451224500605,
+        "pushable": 0.3520577266535849,
+        "climbable": 0.4985874824432772,
+        "breakable": 0.10319244922895027,
+        "holdable": 0.353850527064247,
+        "stackable": 0.6916714965434079
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.16057362590665258,
+        "ambiguity_score": 0.8394263740933474
+      }
+    },
+    "wooden_chair_21": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8849584592858608,
+        "pushable": 0.6627401741660757,
+        "climbable": 0.4108284115381879,
+        "breakable": 0.2277588748151354,
+        "holdable": 0.20923199350579685,
+        "stackable": 0.7707120786278641
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.11424638065799675,
+        "ambiguity_score": 0.8857536193420033
+      }
+    },
+    "wooden_chair_22": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8521121938437576,
+        "pushable": 0.5095642355870739,
+        "climbable": 0.3163412729572695,
+        "breakable": 0.2522426930914705,
+        "holdable": 0.47326377723844415,
+        "stackable": 0.6460091640472279
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.20610302979652972,
+        "ambiguity_score": 0.7938969702034703
+      }
+    },
+    "wooden_chair_23": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8557790526122159,
+        "pushable": 0.5382424753586003,
+        "climbable": 0.20201311428809796,
+        "breakable": 0.12802346585121693,
+        "holdable": 0.32258274854145275,
+        "stackable": 0.6480669241901392
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.20771212842207665,
+        "ambiguity_score": 0.7922878715779234
+      }
+    },
+    "wooden_chair_24": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9183145452288073,
+        "pushable": 0.6004937235984761,
+        "climbable": 0.08570525668865374,
+        "breakable": 0.05763605495316397,
+        "holdable": 0.31842668293664395,
+        "stackable": 0.6928950793811266
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.2254194658476807,
+        "ambiguity_score": 0.7745805341523193
+      }
+    },
+    "wooden_chair_25": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.825519672260789,
+        "pushable": 0.42014707264561113,
+        "climbable": 0.2162961391054293,
+        "breakable": 0.16680950071753037,
+        "holdable": 0.19708238300461473,
+        "stackable": 0.8018324195959167
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.02368725266487237,
+        "ambiguity_score": 0.9763127473351276
+      }
+    },
+    "wooden_chair_26": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8581945554422764,
+        "pushable": 0.5976123847689773,
+        "climbable": 0.4246264778205632,
+        "breakable": 0.1678733075296844,
+        "holdable": 0.3482371118058976,
+        "stackable": 0.7763086440341396
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.08188591140813684,
+        "ambiguity_score": 0.9181140885918632
+      }
+    },
+    "wooden_chair_27": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9588569496823082,
+        "pushable": 0.573771578444272,
+        "climbable": 0.6107920833413675,
+        "breakable": 0.21560093038490935,
+        "holdable": 0.46983821792964847,
+        "stackable": 0.6942143936538008
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.2646425560285074,
+        "ambiguity_score": 0.7353574439714926
+      }
+    },
+    "wooden_chair_28": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8998854850488286,
+        "pushable": 0.6352227187066155,
+        "climbable": 0.3992256883323898,
+        "breakable": 0.19485589497909925,
+        "holdable": 0.5084391133953728,
+        "stackable": 0.8834178885729987
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.01646759647582985,
+        "ambiguity_score": 0.9835324035241702
+      }
+    },
+    "wooden_chair_29": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.87378659739349,
+        "pushable": 0.4416689107749164,
+        "climbable": 0.3657677849187688,
+        "breakable": 0.30120087333625306,
+        "holdable": 0.5142281876455731,
+        "stackable": 0.7011794413211615
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.17260715607232846,
+        "ambiguity_score": 0.8273928439276715
+      }
+    },
+    "wooden_chair_30": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8156393781317103,
+        "pushable": 0.5016825888463424,
+        "climbable": 0.3115595650831947,
+        "breakable": 0.1732516638390627,
+        "holdable": 0.3396539447088421,
+        "stackable": 0.65956673275379
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.15607264537792032,
+        "ambiguity_score": 0.8439273546220797
+      }
+    },
+    "wooden_chair_31": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9256081561071253,
+        "pushable": 0.5045266911668865,
+        "climbable": 0.39342940365354395,
+        "breakable": 0.12272000256798431,
+        "holdable": 0.6314954964865157,
+        "stackable": 0.7220836676230186
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.20352448848410676,
+        "ambiguity_score": 0.7964755115158932
+      }
+    },
+    "wooden_chair_32": {
+      "object_name": "wooden_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8990015887593901,
+        "pushable": 0.4664750699144824,
+        "climbable": 0.16695105739615593,
+        "breakable": 0.10158430745060895,
+        "holdable": 0.28442037761454136,
+        "stackable": 0.6922915789676688
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.20671000979172127,
+        "ambiguity_score": 0.7932899902082787
+      }
+    },
+    "metal_chair_00": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.7948038617003153,
+        "pushable": 0.7167189199603482,
+        "climbable": 0.38218840295564016,
+        "breakable": 0.20624548403265483,
+        "holdable": 0.8382210345583864,
+        "stackable": 0.6713882194829393
+      },
+      "confidence_analysis": {
+        "primary_affordance": "holdable",
+        "confidence_margin": 0.04341717285807112,
+        "ambiguity_score": 0.9565828271419289
+      }
+    },
+    "metal_chair_01": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8923130508712614,
+        "pushable": 0.6354242158215956,
+        "climbable": 0.2242310849437129,
+        "breakable": 0.0,
+        "holdable": 0.4665344717858399,
+        "stackable": 0.7403205190350195
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.15199253183624195,
+        "ambiguity_score": 0.848007468163758
+      }
+    },
+    "metal_chair_02": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9396148823852599,
+        "pushable": 0.7085506578231565,
+        "climbable": 0.32079385094530516,
+        "breakable": 0.030605129130604886,
+        "holdable": 0.5653627695523813,
+        "stackable": 0.6434191643882358
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.2310642245621034,
+        "ambiguity_score": 0.7689357754378966
+      }
+    },
+    "metal_chair_03": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8218818962746759,
+        "pushable": 0.7546483956812035,
+        "climbable": 0.5594863340893415,
+        "breakable": 0.2409223532557478,
+        "holdable": 0.6264289262134846,
+        "stackable": 0.7115133188657278
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.06723350059347244,
+        "ambiguity_score": 0.9327664994065276
+      }
+    },
+    "metal_chair_04": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8189050704405232,
+        "pushable": 0.7179399336564947,
+        "climbable": 0.1857464400669643,
+        "breakable": 0.14437904346044084,
+        "holdable": 0.596157515018017,
+        "stackable": 0.9089578096028366
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.09005273916231338,
+        "ambiguity_score": 0.9099472608376866
+      }
+    },
+    "metal_chair_05": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8192792129967347,
+        "pushable": 0.7692187348008575,
+        "climbable": 0.3024465395018968,
+        "breakable": 0.17737113814881406,
+        "holdable": 0.6733528824737559,
+        "stackable": 0.6672571552754634
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.05006047819587722,
+        "ambiguity_score": 0.9499395218041228
+      }
+    },
+    "metal_chair_06": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8674335401813844,
+        "pushable": 0.674510660946352,
+        "climbable": 0.42464571826116065,
+        "breakable": 0.1998537978992903,
+        "holdable": 0.7544532330853772,
+        "stackable": 0.7492376148687002
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.11298030709600726,
+        "ambiguity_score": 0.8870196929039927
+      }
+    },
+    "metal_chair_07": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8573455913149761,
+        "pushable": 0.7417571310222032,
+        "climbable": 0.5118427981662153,
+        "breakable": 0.1361278179488259,
+        "holdable": 0.7327074596594728,
+        "stackable": 0.7523985285551575
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.10494706275981858,
+        "ambiguity_score": 0.8950529372401814
+      }
+    },
+    "metal_chair_08": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8896940364532562,
+        "pushable": 0.6943726139651295,
+        "climbable": 0.4653636888306747,
+        "breakable": 0.041958514322184615,
+        "holdable": 0.7252043322087556,
+        "stackable": 0.5970731948725893
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.1644897042445006,
+        "ambiguity_score": 0.8355102957554994
+      }
+    },
+    "metal_chair_09": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8149048439951675,
+        "pushable": 0.7270455326220351,
+        "climbable": 0.2704035290791587,
+        "breakable": 0.09785897528288741,
+        "holdable": 0.7239032947166705,
+        "stackable": 0.8164656408384433
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.0015607968432758135,
+        "ambiguity_score": 0.9984392031567242
+      }
+    },
+    "metal_chair_10": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8346623656008851,
+        "pushable": 0.521290323873802,
+        "climbable": 0.48858973194838295,
+        "breakable": 0.12009619114792108,
+        "holdable": 0.6028112993322047,
+        "stackable": 0.7595682474143293
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.07509411818655587,
+        "ambiguity_score": 0.9249058818134441
+      }
+    },
+    "metal_chair_11": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8389899431547796,
+        "pushable": 0.7962740399829177,
+        "climbable": 0.2508370433500292,
+        "breakable": 0.15158236194702876,
+        "holdable": 0.7555267984231898,
+        "stackable": 0.7694691771806391
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.04271590317186191,
+        "ambiguity_score": 0.9572840968281381
+      }
+    },
+    "metal_chair_12": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8822311017497605,
+        "pushable": 0.6806203360835588,
+        "climbable": 0.4654457282351736,
+        "breakable": 0.1682151476393814,
+        "holdable": 0.7442840506445259,
+        "stackable": 0.871270307951621
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.010960793798139523,
+        "ambiguity_score": 0.9890392062018605
+      }
+    },
+    "metal_chair_13": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8751147856363407,
+        "pushable": 0.650449657469909,
+        "climbable": 0.3183349942490909,
+        "breakable": 0.19325925951881484,
+        "holdable": 0.654060190165374,
+        "stackable": 0.5515550158134189
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.22105459547096673,
+        "ambiguity_score": 0.7789454045290333
+      }
+    },
+    "metal_chair_14": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8749955658674807,
+        "pushable": 0.7018750956911763,
+        "climbable": 0.335982382076081,
+        "breakable": 0.1277094659417582,
+        "holdable": 0.7027740919960962,
+        "stackable": 0.6452320504956444
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.17222147387138453,
+        "ambiguity_score": 0.8277785261286155
+      }
+    },
+    "metal_chair_15": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8089061094268687,
+        "pushable": 0.7649177454040144,
+        "climbable": 0.30349185600763884,
+        "breakable": 0.32319416538704127,
+        "holdable": 0.5845212958877587,
+        "stackable": 0.8077065258026251
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.0011995836242435498,
+        "ambiguity_score": 0.9988004163757565
+      }
+    },
+    "metal_chair_16": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.7997360469614884,
+        "pushable": 0.7107257680010235,
+        "climbable": 0.5083625797961744,
+        "breakable": 0.08070891793293118,
+        "holdable": 0.692375509253188,
+        "stackable": 0.6653636451396496
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.08901027896046487,
+        "ambiguity_score": 0.9109897210395351
+      }
+    },
+    "metal_chair_17": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.794097973667759,
+        "pushable": 0.7268496889444039,
+        "climbable": 0.435604641281625,
+        "breakable": 0.13234289542768451,
+        "holdable": 0.6496462662898017,
+        "stackable": 0.8608564648646857
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.06675849119692667,
+        "ambiguity_score": 0.9332415088030733
+      }
+    },
+    "metal_chair_18": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8250597860529552,
+        "pushable": 0.8369916576498442,
+        "climbable": 0.24821178393346904,
+        "breakable": 0.09262133087397567,
+        "holdable": 0.6519536283784504,
+        "stackable": 0.6116114082852904
+      },
+      "confidence_analysis": {
+        "primary_affordance": "pushable",
+        "confidence_margin": 0.011931871596889021,
+        "ambiguity_score": 0.988068128403111
+      }
+    },
+    "metal_chair_19": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9023104548801905,
+        "pushable": 0.7368426264333703,
+        "climbable": 0.3271680851855737,
+        "breakable": 0.24220868267514253,
+        "holdable": 0.6379458279094591,
+        "stackable": 1.0
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.09768954511980954,
+        "ambiguity_score": 0.9023104548801905
+      }
+    },
+    "metal_chair_20": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9224999245567091,
+        "pushable": 0.7623384805622697,
+        "climbable": 0.3597427751581797,
+        "breakable": 0.1946895788179571,
+        "holdable": 0.5525886250308462,
+        "stackable": 0.935227834707667
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.012727910150957866,
+        "ambiguity_score": 0.9872720898490421
+      }
+    },
+    "metal_chair_21": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9369126397250063,
+        "pushable": 0.6654674293194524,
+        "climbable": 0.20808597263752968,
+        "breakable": 0.09450204131114433,
+        "holdable": 0.7979836234931245,
+        "stackable": 0.7325151151445144
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.1389290162318818,
+        "ambiguity_score": 0.8610709837681182
+      }
+    },
+    "metal_chair_22": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8301105113977909,
+        "pushable": 0.6558991712453746,
+        "climbable": 0.31579171900030917,
+        "breakable": 0.05311607285645251,
+        "holdable": 0.811161524398349,
+        "stackable": 0.6854122255526691
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.01894898699944192,
+        "ambiguity_score": 0.9810510130005581
+      }
+    },
+    "metal_chair_23": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8604286309896195,
+        "pushable": 0.7733464553716946,
+        "climbable": 0.2972901151567787,
+        "breakable": 0.2400755182277663,
+        "holdable": 0.6514079862661132,
+        "stackable": 0.7269384425272443
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.08708217561792497,
+        "ambiguity_score": 0.912917824382075
+      }
+    },
+    "metal_chair_24": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9154163857281873,
+        "pushable": 0.7271872911456048,
+        "climbable": 0.3444267278830599,
+        "breakable": 0.23927269177345378,
+        "holdable": 0.7979445149808118,
+        "stackable": 0.8334499502832551
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.0819664354449322,
+        "ambiguity_score": 0.9180335645550678
+      }
+    },
+    "metal_chair_25": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.7901802814561618,
+        "pushable": 0.6313834609717123,
+        "climbable": 0.3633692828405069,
+        "breakable": 0.08819446504409258,
+        "holdable": 0.8524477079765161,
+        "stackable": 0.6523681442023483
+      },
+      "confidence_analysis": {
+        "primary_affordance": "holdable",
+        "confidence_margin": 0.06226742652035433,
+        "ambiguity_score": 0.9377325734796457
+      }
+    },
+    "metal_chair_26": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8563597781421375,
+        "pushable": 0.5703117514891693,
+        "climbable": 0.3145329342228163,
+        "breakable": 0.2786596868189475,
+        "holdable": 0.582549970803253,
+        "stackable": 0.704004286905517
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.1523554912366205,
+        "ambiguity_score": 0.8476445087633795
+      }
+    },
+    "metal_chair_27": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8853997865623212,
+        "pushable": 0.7871587737317737,
+        "climbable": 0.3197643585222284,
+        "breakable": 0.05839223819546577,
+        "holdable": 0.7167496404084005,
+        "stackable": 0.8813102828962548
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.004089503666066419,
+        "ambiguity_score": 0.9959104963339336
+      }
+    },
+    "metal_chair_28": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.7900276820762955,
+        "pushable": 0.7450336845944405,
+        "climbable": 0.30383171603726006,
+        "breakable": 0.22229382886309038,
+        "holdable": 0.7023958233530163,
+        "stackable": 0.6881939489510008
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.04499399748185495,
+        "ambiguity_score": 0.955006002518145
+      }
+    },
+    "metal_chair_29": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.9130220174337588,
+        "pushable": 0.809773913004114,
+        "climbable": 0.21472921189479796,
+        "breakable": 0.19752378515162772,
+        "holdable": 0.6872793959711225,
+        "stackable": 0.9068132229700389
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.006208794463719913,
+        "ambiguity_score": 0.9937912055362801
+      }
+    },
+    "metal_chair_30": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.7470960714579019,
+        "pushable": 0.7803441919658816,
+        "climbable": 0.305424475297985,
+        "breakable": 0.17517522830524676,
+        "holdable": 0.5796682146192947,
+        "stackable": 0.7779635046093161
+      },
+      "confidence_analysis": {
+        "primary_affordance": "pushable",
+        "confidence_margin": 0.002380687356565492,
+        "ambiguity_score": 0.9976193126434345
+      }
+    },
+    "metal_chair_31": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8680406371571956,
+        "pushable": 0.6721069897587658,
+        "climbable": 0.26278142113846664,
+        "breakable": 0.13021631654532664,
+        "holdable": 0.8840206495592957,
+        "stackable": 0.6157369780722983
+      },
+      "confidence_analysis": {
+        "primary_affordance": "holdable",
+        "confidence_margin": 0.01598001240210012,
+        "ambiguity_score": 0.9840199875978999
+      }
+    },
+    "metal_chair_32": {
+      "object_name": "metal_chair",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8815552479965908,
+        "pushable": 0.8202947344533615,
+        "climbable": 0.41852089651890856,
+        "breakable": 0.0,
+        "holdable": 0.62531200155957,
+        "stackable": 0.7695449675546171
+      },
+      "confidence_analysis": {
+        "primary_affordance": "sittable",
+        "confidence_margin": 0.061260513543229256,
+        "ambiguity_score": 0.9387394864567707
+      }
+    },
+    "wooden_table_00": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.18252343091051518,
+        "pushable": 0.18189033358443554,
+        "climbable": 0.28153754364104966,
+        "breakable": 0.23267354421840886,
+        "holdable": 0.05044288300330035,
+        "stackable": 0.6344428644775043
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.35290532083645465,
+        "ambiguity_score": 0.6470946791635453
+      }
+    },
+    "wooden_table_01": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.17047028007415507,
+        "pushable": 0.25574850954921896,
+        "climbable": 0.33614697484266876,
+        "breakable": 0.2101168327081216,
+        "holdable": 0.09016965919576385,
+        "stackable": 0.737047050269646
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.40090007542697725,
+        "ambiguity_score": 0.5990999245730227
+      }
+    },
+    "wooden_table_02": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.16445722455581324,
+        "pushable": 0.2800465738638639,
+        "climbable": 0.3728912326853784,
+        "breakable": 0.17109374596101867,
+        "holdable": 0.04595822820953762,
+        "stackable": 0.6679554576136608
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.29506422492828244,
+        "ambiguity_score": 0.7049357750717176
+      }
+    },
+    "wooden_table_03": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.16016939880818087,
+        "pushable": 0.14633533759848344,
+        "climbable": 0.2819437539966413,
+        "breakable": 0.08730780571568081,
+        "holdable": 0.019822430111642864,
+        "stackable": 0.8406640441649731
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.5587202901683318,
+        "ambiguity_score": 0.4412797098316682
+      }
+    },
+    "wooden_table_04": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.21162545198195423,
+        "pushable": 0.1522971716194144,
+        "climbable": 0.4250014026933164,
+        "breakable": 0.32801994826065756,
+        "holdable": 0.06852499350455082,
+        "stackable": 0.670036580647059
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.24503517795374258,
+        "ambiguity_score": 0.7549648220462575
+      }
+    },
+    "wooden_table_05": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.13935991718492652,
+        "pushable": 0.18820875700952172,
+        "climbable": 0.2631835380519185,
+        "breakable": 0.05251737196498562,
+        "holdable": 0.043355804367553166,
+        "stackable": 0.6955766804008149
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.43239314234889636,
+        "ambiguity_score": 0.5676068576511036
+      }
+    },
+    "wooden_table_06": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.0880940942995573,
+        "pushable": 0.313812613372539,
+        "climbable": 0.3835340256679524,
+        "breakable": 0.0343567873869083,
+        "holdable": 0.1245382336892364,
+        "stackable": 0.8189432804840804
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.43540925481612797,
+        "ambiguity_score": 0.5645907451838721
+      }
+    },
+    "wooden_table_07": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.1521308459303103,
+        "pushable": 0.3570448646446866,
+        "climbable": 0.320406960295675,
+        "breakable": 0.08860796897350326,
+        "holdable": 0.08168663886602695,
+        "stackable": 0.7490305273752975
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.3919856627306109,
+        "ambiguity_score": 0.6080143372693891
+      }
+    },
+    "wooden_table_08": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.07589075364285938,
+        "pushable": 0.21862262218840756,
+        "climbable": 0.31041645651019384,
+        "breakable": 0.006520505920506868,
+        "holdable": 0.0335731662589089,
+        "stackable": 0.8370121183883736
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.5265956618781797,
+        "ambiguity_score": 0.47340433812182026
+      }
+    },
+    "wooden_table_09": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.10452364428341328,
+        "pushable": 0.1447118284096599,
+        "climbable": 0.35801054292212153,
+        "breakable": 0.22329231706458919,
+        "holdable": 0.0,
+        "stackable": 0.6559324417186477
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.2979218987965262,
+        "ambiguity_score": 0.7020781012034738
+      }
+    },
+    "wooden_table_10": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.10705700154215121,
+        "pushable": 0.35410684380618035,
+        "climbable": 0.2362135596289826,
+        "breakable": 0.052388113010569365,
+        "holdable": 0.06338463640680822,
+        "stackable": 0.7610357363477195
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.40692889254153913,
+        "ambiguity_score": 0.5930711074584609
+      }
+    },
+    "wooden_table_11": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.09753741300729583,
+        "pushable": 0.28654777614922017,
+        "climbable": 0.28830524146679803,
+        "breakable": 0.12340291318879347,
+        "holdable": 0.07243898363552165,
+        "stackable": 0.9322753621665271
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.643970120699729,
+        "ambiguity_score": 0.35602987930027097
+      }
+    },
+    "wooden_table_12": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.10742906875940271,
+        "pushable": 0.29673232053318394,
+        "climbable": 0.3589093887606589,
+        "breakable": 0.13814029976115438,
+        "holdable": 0.05547722571660272,
+        "stackable": 0.9223419603134555
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.5634325715527966,
+        "ambiguity_score": 0.4365674284472034
+      }
+    },
+    "wooden_table_13": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.11855647578868359,
+        "pushable": 0.18425130702089687,
+        "climbable": 0.457181000651783,
+        "breakable": 0.15090121299221948,
+        "holdable": 0.07880090797834068,
+        "stackable": 0.6950459459313161
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.23786494527953306,
+        "ambiguity_score": 0.7621350547204669
+      }
+    },
+    "wooden_table_14": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.20602545351413398,
+        "pushable": 0.3857855394422031,
+        "climbable": 0.3085538666818924,
+        "breakable": 0.21611384155365204,
+        "holdable": 0.03851104771916821,
+        "stackable": 0.836423212897714
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.4506376734555109,
+        "ambiguity_score": 0.5493623265444891
+      }
+    },
+    "wooden_table_15": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.18798069780941631,
+        "pushable": 0.3119330986920112,
+        "climbable": 0.44442071310041315,
+        "breakable": 0.1871172213730194,
+        "holdable": 0.10379710558477098,
+        "stackable": 0.5806864833673774
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.13626577026696424,
+        "ambiguity_score": 0.8637342297330357
+      }
+    },
+    "wooden_table_16": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.1194270843212279,
+        "pushable": 0.25068881533899623,
+        "climbable": 0.3189406447517897,
+        "breakable": 0.14472903593441008,
+        "holdable": 0.07408307270441919,
+        "stackable": 0.704621845717968
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.38568120096617836,
+        "ambiguity_score": 0.6143187990338217
+      }
+    },
+    "wooden_table_17": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.1605233177727505,
+        "pushable": 0.2701475393976481,
+        "climbable": 0.4894331345550648,
+        "breakable": 0.19397795519060138,
+        "holdable": 0.0999360399184147,
+        "stackable": 0.7530654843230213
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.2636323497679565,
+        "ambiguity_score": 0.7363676502320435
+      }
+    },
+    "wooden_table_18": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.06355657702022488,
+        "pushable": 0.1868722020925553,
+        "climbable": 0.34940959932321963,
+        "breakable": 0.18651825984394949,
+        "holdable": 0.020712827386367115,
+        "stackable": 0.6357712440893408
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.2863616447661212,
+        "ambiguity_score": 0.7136383552338788
+      }
+    },
+    "wooden_table_19": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.20519097269663822,
+        "pushable": 0.18445088281764466,
+        "climbable": 0.3544769907393953,
+        "breakable": 0.2749230950905598,
+        "holdable": 0.07597962647451706,
+        "stackable": 0.7561289630668517
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.4016519723274564,
+        "ambiguity_score": 0.5983480276725436
+      }
+    },
+    "wooden_table_20": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.09910721142383822,
+        "pushable": 0.348055429830752,
+        "climbable": 0.2799200600315007,
+        "breakable": 0.12554564855730138,
+        "holdable": 0.011114381427760361,
+        "stackable": 0.5288636115953244
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.18080818176457236,
+        "ambiguity_score": 0.8191918182354276
+      }
+    },
+    "wooden_table_21": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.23575014938121955,
+        "pushable": 0.2845812776078314,
+        "climbable": 0.33549864072991986,
+        "breakable": 0.14839689054607144,
+        "holdable": 0.07548971823154786,
+        "stackable": 0.7401595332787704
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.4046608925488505,
+        "ambiguity_score": 0.5953391074511495
+      }
+    },
+    "wooden_table_22": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.10184412359900677,
+        "pushable": 0.3157337011111106,
+        "climbable": 0.3181375496572536,
+        "breakable": 0.08673133179290213,
+        "holdable": 0.0022410771897870413,
+        "stackable": 0.6014938067166875
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.2833562570594339,
+        "ambiguity_score": 0.7166437429405661
+      }
+    },
+    "wooden_table_23": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.15771964958916201,
+        "pushable": 0.18302527930689355,
+        "climbable": 0.31608869870444656,
+        "breakable": 0.26665177838784754,
+        "holdable": 0.028150688067297015,
+        "stackable": 0.7759150256282349
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.45982632692378833,
+        "ambiguity_score": 0.5401736730762117
+      }
+    },
+    "wooden_table_24": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.148742196339665,
+        "pushable": 0.19117847821951028,
+        "climbable": 0.14402494245948866,
+        "breakable": 0.014026803515754683,
+        "holdable": 0.02865558784270109,
+        "stackable": 0.7257001838685074
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.5345217056489971,
+        "ambiguity_score": 0.46547829435100285
+      }
+    },
+    "wooden_table_25": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.06322169425541607,
+        "pushable": 0.19013497522902886,
+        "climbable": 0.12851040142581568,
+        "breakable": 0.15859064836061007,
+        "holdable": 0.03254429825700506,
+        "stackable": 0.7355205007728784
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.5453855255438496,
+        "ambiguity_score": 0.45461447445615044
+      }
+    },
+    "wooden_table_26": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.18584479527007908,
+        "pushable": 0.267215358710127,
+        "climbable": 0.3091331356149034,
+        "breakable": 0.15253313977463534,
+        "holdable": 0.08868385803281482,
+        "stackable": 0.8480303618329589
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.5388972262180555,
+        "ambiguity_score": 0.46110277378194453
+      }
+    },
+    "wooden_table_27": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.13254771087047226,
+        "pushable": 0.04743008763107217,
+        "climbable": 0.11884265904691327,
+        "breakable": 0.07660109813967715,
+        "holdable": 0.05932333550602264,
+        "stackable": 0.7952312774864673
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.662683566615995,
+        "ambiguity_score": 0.33731643338400497
+      }
+    },
+    "wooden_table_28": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.1023843882032537,
+        "pushable": 0.28858355754560844,
+        "climbable": 0.4688193697704535,
+        "breakable": 0.18656270146583837,
+        "holdable": 0.07542335346934877,
+        "stackable": 0.6972959536975335
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.22847658392707998,
+        "ambiguity_score": 0.7715234160729201
+      }
+    },
+    "wooden_table_29": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.1958348972632834,
+        "pushable": 0.14854230989090883,
+        "climbable": 0.47408887838433644,
+        "breakable": 0.28690974523193513,
+        "holdable": 0.06149742898491605,
+        "stackable": 0.8087731994939579
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.33468432110962143,
+        "ambiguity_score": 0.6653156788903786
+      }
+    },
+    "wooden_table_30": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.13862712640605368,
+        "pushable": 0.2762242350524842,
+        "climbable": 0.18047045638334214,
+        "breakable": 0.10899626987615632,
+        "holdable": 0.011076892225595453,
+        "stackable": 0.803178276391062
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.5269540413385778,
+        "ambiguity_score": 0.4730459586614222
+      }
+    },
+    "wooden_table_31": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.1059227805317946,
+        "pushable": 0.2507335111166002,
+        "climbable": 0.26042294545277345,
+        "breakable": 0.09087530206149477,
+        "holdable": 0.04320096525128952,
+        "stackable": 0.6291003778637932
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.3686774324110198,
+        "ambiguity_score": 0.6313225675889802
+      }
+    },
+    "wooden_table_32": {
+      "object_name": "wooden_table",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.1715107139928138,
+        "pushable": 0.3358370115306882,
+        "climbable": 0.3642199673816716,
+        "breakable": 0.10698907426401691,
+        "holdable": 0.0,
+        "stackable": 0.5556394096383067
+      },
+      "confidence_analysis": {
+        "primary_affordance": "stackable",
+        "confidence_margin": 0.1914194422566351,
+        "ambiguity_score": 0.8085805577433649
+      }
+    },
+    "plastic_stool_00": {
+      "object_name": "plastic_stool",
+      "category": "furniture",
+      "affordances": {
+        "sittable": 0.8290083048755938,
+        "pushable": 0.9662951810704554,
+        "climbable": 0.2381177400294403,
+        "breakable": 0.34183598447798735,
+        "holdable": 0.8495884379849103,
+        "stackable": 0.1059154236520678
+      },
+      "confidence_analysis": {
+        "primary_affordance": "pushable",
+        "confidence_margin": 0.11670674308554507,
+        "ambiguity_score": 0.8832932569144549
+      }
+    }
+  }
+}
