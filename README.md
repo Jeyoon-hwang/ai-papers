@@ -1,7 +1,7 @@
 # AI Papers - Sequence Engine Research
 
 **Author:** Jeyoon-hwan  
-**Date:** May 2026  
+**Date:** May 2026
 
 ## Papers
 
@@ -38,4 +38,4 @@
 
 ---
 
-*Research conducted by 천재 (Cheonjae) for 황제영 (Jeyoon-hwan)*
+
