@@ -22,44 +22,21 @@
 
 ---
 
-## 🔬 Research Implementation
+## 🔬 Implementation
 
-### Project Structure
+### affordance_vision/
+Visual affordance recognition system using VAE-based learning.
 
-```
-sequence-engine/
-├── papers/              # Academic publications
-├── src/                 # Core implementation
-│   ├── auto_improvement_loop.py      # Automated improvement pipeline
-│   ├── comprehensive_validation.py   # Validation & metrics
-│   └── phase10_advanced_memory_system.py # Memory management
-├── affordance_vision/   # Vision-based affordance detection
-├── auto_improvement/    # Automatic model improvement
-├── industrial_robot_affordance/  # Robot deployment code
-└── README.md
-```
-
-### Key Modules
-
-#### 1. **affordance_vision/** 
-- Visual affordance recognition using VAE
-- Form-independence validation
-- Transfer learning pipelines
-
-#### 2. **auto_improvement/**
-- Automated criticism & fix generation
-- Iterative refinement loops
-- Performance benchmarking
-
-#### 3. **industrial_robot_affordance/**
-- UR10e robot integration
-- Real-world deployment
-- End-to-end reasoning (555ms latency, 30 fps)
-
-#### 4. **src/**
-- Core algorithms and utilities
-- Validation frameworks
-- Memory systems
+- **Key Features:**
+  - Form-independent affordance detection
+  - Real-time webcam inference
+  - Benchmark evaluation
+  
+- **Files:**
+  - `demo_realtime_webcam.py` - Live affordance recognition
+  - `benchmark_webcam.py` - Performance evaluation
+  - `ARCHITECTURE.md` - Technical details
+  - Test results and datasets
 
 ---
 
@@ -78,8 +55,8 @@ sequence-engine/
 
 ### C3: Multi-Phase Transfer
 - Synthetic-to-real transfer learning
-- Game → Ego4D → Industrial robot
-- **Result: 99.99% transfer performance, 88.5% real-world accuracy**
+- Game → Ego4D data
+- **Result: 99.99% transfer performance**
 
 ### C4: Sequence Engine Principle
 - Unified framework for iterative AI improvement
@@ -94,9 +71,6 @@ sequence-engine/
 | Form-Independence Score (FIS) | 99.51% | >90% | ✅ |
 | Affordance Coverage | 100% | >90% | ✅ |
 | Transfer Performance | 99.99% | >80% | ✅ |
-| Real-World Accuracy | 88.5% | >85% | ✅ |
-| Latency | 555ms | <600ms | ✅ |
-| FPS | 30 | ≥30 | ✅ |
 
 ---
 
@@ -106,24 +80,36 @@ sequence-engine/
 ```bash
 git clone https://github.com/Jeyoon-hwang/ai-papers.git
 cd ai-papers
+cd affordance_vision
 pip install -r requirements.txt
 ```
 
-### Training
+### Live Demo
 ```bash
-python src/auto_improvement_loop.py
+python demo_realtime_webcam.py
 ```
 
 ### Evaluation
 ```bash
-python src/comprehensive_validation.py
+python benchmark_webcam.py
 ```
 
-### Deployment (Robot)
-```bash
-cd industrial_robot_affordance
-python deploy_ur10e.py
-```
+---
+
+## 📖 Reading the Paper
+
+- **Full paper**: [paper_ffal.md](paper_ffal.md) or [paper_ffal.pdf](paper_ffal.pdf)
+- **Quick summary**: [paper_summary.md](paper_summary.md)
+- **Theoretical details**: [PAPER_SEQUENCE_ENGINE.md](PAPER_SEQUENCE_ENGINE.md)
+- **Related work**: [PAPER_LANDSCAPE.md](PAPER_LANDSCAPE.md)
+
+---
+
+## 📋 Publication Status
+
+- ✅ **GitHub**: Public repository
+- ✅ **JMLR**: Submitted (Manuscript #26-1603)
+- ⏳ **Peer Review**: In progress (3-6 months expected)
 
 ---
 
@@ -140,23 +126,6 @@ If you use this research, please cite:
   note={Manuscript ID: 26-1603}
 }
 ```
-
----
-
-## 📖 Reading the Paper
-
-- **Full paper**: [paper_ffal.md](paper_ffal.md) or [paper_ffal.pdf](paper_ffal.pdf)
-- **Quick summary**: [paper_summary.md](paper_summary.md)
-- **Theoretical details**: [PAPER_SEQUENCE_ENGINE.md](PAPER_SEQUENCE_ENGINE.md)
-- **Related work**: [PAPER_LANDSCAPE.md](PAPER_LANDSCAPE.md)
-
----
-
-## 📋 Submission Status
-
-- ✅ **GitHub**: Public repository
-- ✅ **JMLR**: Submitted (Manuscript #26-1603)
-- ⏳ **Peer Review**: In progress (3-6 months expected)
 
 ---
 
