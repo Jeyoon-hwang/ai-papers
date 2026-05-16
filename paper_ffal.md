@@ -1,8 +1,8 @@
 # Function-First Learning: Unveiling Universal Affordances Through Form-Independent Representations
 
-**Authors:** [Author names]  
-**Affiliation:** [Institution]  
-**Correspondence:** [Email]  
+**Authors:** Jeyoon-hwan  
+**Affiliation:** Independent Researcher  
+**Correspondence:** hwangjyoung27@gmail.com  
 **Date Submitted:** May 2026
 
 ---

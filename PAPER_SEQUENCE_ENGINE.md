@@ -1,9 +1,9 @@
 # Sequence Engine: Function-First Learning for Affordance Recognition and Sim-to-Real Transfer
 
-**Authors**: Hwang Jeyeong, Cheonjae (AI)  
-**Affiliation**: Independent Research  
-**Date**: May 13-14, 2026  
-**Status**: Complete with empirical validation
+**Authors**: Jeyoon-hwan  
+**Affiliation**: Independent Researcher  
+**Correspondence**: hwangjyoung27@gmail.com  
+**Date Submitted**: May 2026
 
 ---
 
