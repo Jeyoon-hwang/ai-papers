@@ -1,0 +1,1 @@
+{"frame": 1, "affordances": {"graspable": 0.86, "stackable": 0.81, "insertable": 0.52, "placeable": 0.91, "moveable": 0.89, "fragile": 0.31}, "reasoning": "\ud14c\uc2a4\ud2b8 \ucd94\ub860", "text": "\ud14c\uc2a4\ud2b8 \ud14d\uc2a4\ud2b8", "latencies": {"vision": 46, "reasoning": 301, "gemma": 521, "total": 866}}

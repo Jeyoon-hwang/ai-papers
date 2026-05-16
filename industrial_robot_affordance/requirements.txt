@@ -1,0 +1,42 @@
+# Industrial Robot Affordance System - Requirements
+
+# Core dependencies
+numpy>=1.21.0
+scipy>=1.7.0
+pandas>=1.3.0
+
+# Deep Learning
+torch>=1.10.0
+torchvision>=0.11.0
+torchaudio>=0.10.0
+
+# Computer Vision
+opencv-python>=4.5.0
+Pillow>=8.3.0
+scikit-image>=0.18.0
+
+# Simulation & Physics
+pybullet>=3.1.0
+
+# Robotics
+# Note: ROS installation should be done separately via apt/brew
+# rospy
+# moveit_commander
+# sensor_msgs
+
+# Utilities
+tqdm>=4.62.0
+matplotlib>=3.4.0
+jupyter>=1.0.0
+ipython>=7.0.0
+
+# Data processing
+h5py>=3.0.0
+scikit-learn>=0.24.0
+
+# Optional: GPU acceleration (comment out if not using CUDA)
+# torch-cuda-toolkit>=11.1
+
+# Optional: Advanced visualization
+# open3d>=0.13.0
+# trimesh>=3.9.0
