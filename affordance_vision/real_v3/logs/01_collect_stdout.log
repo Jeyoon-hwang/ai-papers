@@ -1,0 +1,47 @@
+[catalog] wrote 30 objects
+
+====================================================================
+MuJoCo rollouts: 30 objects x 34 episodes x 5 probes
+====================================================================
+[obj 01/30] obj_00 done in 2.7s (running total 34 samples, elapsed 0.0min)
+[obj 02/30] obj_01 done in 2.6s (running total 68 samples, elapsed 0.1min)
+[obj 03/30] obj_02 done in 2.2s (running total 102 samples, elapsed 0.1min)
+[obj 04/30] obj_03 done in 2.4s (running total 136 samples, elapsed 0.2min)
+[obj 05/30] obj_04 done in 1.7s (running total 170 samples, elapsed 0.2min)
+[obj 06/30] obj_05 done in 2.6s (running total 204 samples, elapsed 0.2min)
+[obj 07/30] obj_06 done in 2.7s (running total 238 samples, elapsed 0.3min)
+[obj 08/30] obj_07 done in 2.3s (running total 272 samples, elapsed 0.3min)
+[obj 09/30] obj_08 done in 2.3s (running total 306 samples, elapsed 0.4min)
+[obj 10/30] obj_09 done in 1.7s (running total 340 samples, elapsed 0.4min)
+[obj 11/30] obj_10 done in 2.8s (running total 374 samples, elapsed 0.4min)
+[obj 12/30] obj_11 done in 2.7s (running total 408 samples, elapsed 0.5min)
+[obj 13/30] obj_12 done in 2.1s (running total 442 samples, elapsed 0.5min)
+[obj 14/30] obj_13 done in 2.6s (running total 476 samples, elapsed 0.6min)
+[obj 15/30] obj_14 done in 1.7s (running total 510 samples, elapsed 0.6min)
+[obj 16/30] obj_15 done in 2.8s (running total 544 samples, elapsed 0.6min)
+[obj 17/30] obj_16 done in 2.6s (running total 578 samples, elapsed 0.7min)
+[obj 18/30] obj_17 done in 2.2s (running total 612 samples, elapsed 0.7min)
+[obj 19/30] obj_18 done in 2.5s (running total 646 samples, elapsed 0.8min)
+AGX: exceeded compiled variants footprint limit
+[obj 20/30] obj_19 done in 2.0s (running total 680 samples, elapsed 0.8min)
+[obj 21/30] obj_20 done in 2.7s (running total 714 samples, elapsed 0.8min)
+[obj 22/30] obj_21 done in 2.6s (running total 748 samples, elapsed 0.9min)
+[obj 23/30] obj_22 done in 2.2s (running total 782 samples, elapsed 0.9min)
+[obj 24/30] obj_23 done in 2.8s (running total 816 samples, elapsed 1.0min)
+[obj 25/30] obj_24 done in 1.9s (running total 850 samples, elapsed 1.0min)
+[obj 26/30] obj_25 done in 2.7s (running total 884 samples, elapsed 1.0min)
+[obj 27/30] obj_26 done in 2.8s (running total 918 samples, elapsed 1.1min)
+[obj 28/30] obj_27 done in 2.3s (running total 952 samples, elapsed 1.1min)
+[obj 29/30] obj_28 done in 2.4s (running total 986 samples, elapsed 1.2min)
+[obj 30/30] obj_29 done in 1.5s (running total 1020 samples, elapsed 1.2min)
+
+====================================================================
+DONE: 1020 samples in 1.2 min
+====================================================================
+
+Class balance:
+  sittable   pos= 350 (34.31%), neg= 670
+  stackable  pos= 405 (39.71%), neg= 615
+  graspable  pos= 408 (40.00%), neg= 612
+  pushable   pos= 578 (56.67%), neg= 442
+  pourable   pos= 102 (10.00%), neg= 918

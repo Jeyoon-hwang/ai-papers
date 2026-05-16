@@ -1,0 +1,306 @@
+{
+  "n_prompts": 170,
+  "top1_precision": 0.5470588235294118,
+  "top3_precision": 0.3588235294117647,
+  "top3_jaccard": 0.31176470588235294,
+  "cohens_kappa": 0.1985241358803464,
+  "head": "head_ffal.pt",
+  "examples": [
+    {
+      "sample_id": "obj_12_ep004",
+      "shape": "sphere",
+      "surface": "flat_top",
+      "pred_affordances": [
+        [
+          "pushable",
+          0.9999933242797852
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "stackable",
+          1.0
+        ],
+        [
+          "pushable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "gold_uses": [
+        "place another object on top",
+        "slide along the floor",
+        "build a small stack"
+      ],
+      "prompt": "Object features: shape=sphere (fully round); surface=flat_top; size_xyz=[0.274, 0.274, 0.274]; density=170 kg/m^3.\nPredicted affordances (confidence): pushable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_09_ep018",
+      "shape": "capsule",
+      "surface": "rounded_top",
+      "pred_affordances": [
+        [
+          "pushable",
+          0.9999580383300781
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "pushable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "gold_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "prompt": "Object features: shape=capsule (elongated, pill-shaped); surface=rounded_top; size_xyz=[0.21, 0.144, 0.205]; density=351 kg/m^3.\nPredicted affordances (confidence): pushable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_09_ep015",
+      "shape": "capsule",
+      "surface": "rounded_top",
+      "pred_affordances": [
+        [
+          "pushable",
+          0.9999539852142334
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "pushable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "gold_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "prompt": "Object features: shape=capsule (elongated, pill-shaped); surface=rounded_top; size_xyz=[0.21, 0.144, 0.205]; density=351 kg/m^3.\nPredicted affordances (confidence): pushable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_09_ep005",
+      "shape": "capsule",
+      "surface": "rounded_top",
+      "pred_affordances": [
+        [
+          "pushable",
+          0.9999089241027832
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "pushable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "gold_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "prompt": "Object features: shape=capsule (elongated, pill-shaped); surface=rounded_top; size_xyz=[0.21, 0.144, 0.205]; density=351 kg/m^3.\nPredicted affordances (confidence): pushable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_26_ep016",
+      "shape": "cylinder",
+      "surface": "hollow_top",
+      "pred_affordances": [
+        [
+          "sittable",
+          0.9999889135360718
+        ],
+        [
+          "stackable",
+          0.9999538660049438
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "sittable",
+          1.0
+        ],
+        [
+          "stackable",
+          1.0
+        ],
+        [
+          "pourable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "sit on it as a stool",
+        "place another object on top",
+        "rest a weight on it"
+      ],
+      "gold_uses": [
+        "pour liquid into it",
+        "store small items inside",
+        "sit on it as a stool"
+      ],
+      "prompt": "Object features: shape=cylinder (round, even-radius); surface=hollow_top; size_xyz=[0.184, 0.184, 0.132]; density=167 kg/m^3.\nPredicted affordances (confidence): sittable=1.00, stackable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_11_ep004",
+      "shape": "cylinder",
+      "surface": "pointy_top",
+      "pred_affordances": [
+        [
+          "sittable",
+          0.9998985528945923
+        ],
+        [
+          "stackable",
+          0.9998052716255188
+        ]
+      ],
+      "gold_affordances": [],
+      "pred_uses": [
+        "place another object on top",
+        "build a small stack",
+        "balance items"
+      ],
+      "gold_uses": [],
+      "prompt": "Object features: shape=cylinder (round, even-radius); surface=pointy_top; size_xyz=[0.297, 0.297, 0.177]; density=572 kg/m^3.\nPredicted affordances (confidence): sittable=1.00, stackable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_11_ep028",
+      "shape": "cylinder",
+      "surface": "pointy_top",
+      "pred_affordances": [
+        [
+          "sittable",
+          0.9995934367179871
+        ],
+        [
+          "stackable",
+          0.9991804957389832
+        ]
+      ],
+      "gold_affordances": [],
+      "pred_uses": [
+        "place another object on top",
+        "build a small stack",
+        "balance items"
+      ],
+      "gold_uses": [],
+      "prompt": "Object features: shape=cylinder (round, even-radius); surface=pointy_top; size_xyz=[0.297, 0.297, 0.177]; density=572 kg/m^3.\nPredicted affordances (confidence): sittable=1.00, stackable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_12_ep013",
+      "shape": "sphere",
+      "surface": "flat_top",
+      "pred_affordances": [
+        [
+          "pushable",
+          0.9999971389770508
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "stackable",
+          1.0
+        ],
+        [
+          "pushable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "gold_uses": [
+        "place another object on top",
+        "slide along the floor",
+        "build a small stack"
+      ],
+      "prompt": "Object features: shape=sphere (fully round); surface=flat_top; size_xyz=[0.274, 0.274, 0.274]; density=170 kg/m^3.\nPredicted affordances (confidence): pushable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_12_ep030",
+      "shape": "sphere",
+      "surface": "flat_top",
+      "pred_affordances": [
+        [
+          "pushable",
+          0.999997615814209
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "stackable",
+          1.0
+        ],
+        [
+          "pushable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "gold_uses": [
+        "place another object on top",
+        "slide along the floor",
+        "build a small stack"
+      ],
+      "prompt": "Object features: shape=sphere (fully round); surface=flat_top; size_xyz=[0.274, 0.274, 0.274]; density=170 kg/m^3.\nPredicted affordances (confidence): pushable=1.00.\nList the 3 most plausible uses in priority order."
+    },
+    {
+      "sample_id": "obj_23_ep007",
+      "shape": "ellipsoid",
+      "surface": "pointy_top",
+      "pred_affordances": [
+        [
+          "pushable",
+          0.9999246597290039
+        ]
+      ],
+      "gold_affordances": [
+        [
+          "graspable",
+          1.0
+        ]
+      ],
+      "pred_uses": [
+        "slide along the floor",
+        "rearrange position",
+        "move out of the way"
+      ],
+      "gold_uses": [
+        "pick it up by hand",
+        "transport with grip",
+        "hold while inspecting"
+      ],
+      "prompt": "Object features: shape=ellipsoid (oval, smooth); surface=pointy_top; size_xyz=[0.197, 0.168, 0.124]; density=781 kg/m^3.\nPredicted affordances (confidence): pushable=1.00.\nList the 3 most plausible uses in priority order."
+    }
+  ],
+  "llm_call_results": null,
+  "seed": 20260516
+}

@@ -1,0 +1,172 @@
+
+====================================================================
+Device: mps  Backbones: ['resnet50', 'vit_b16', 'clip_b32', 'dinov2', 'ffal']
+====================================================================
+loaded 1020 rows
+split: train=714 val=136 test=170
+  train objs (21): ['obj_00', 'obj_01', 'obj_02', 'obj_03', 'obj_05', 'obj_06', 'obj_07', 'obj_08', 'obj_10', 'obj_16', 'obj_17', 'obj_18', 'obj_19', 'obj_20', 'obj_21', 'obj_22', 'obj_24', 'obj_25', 'obj_27', 'obj_28', 'obj_29']
+  val objs   (4): ['obj_04', 'obj_13', 'obj_14', 'obj_15']
+  test objs  (5): ['obj_09', 'obj_11', 'obj_12', 'obj_23', 'obj_26']
+
+====================================================================
+Backbone: resnet50
+====================================================================
+[timed] backbone-resnet50 setup: 0.27s
+[timed] feature extraction (resnet50): 3.32s
+/Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/scripts/02_train_and_baselines.py:204: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  losses.append(float(loss))
+      epoch 00 loss=0.4371 val_AUROC=0.6534
+      epoch 01 loss=0.1421 val_AUROC=0.6896
+      epoch 02 loss=0.0904 val_AUROC=0.6874
+      epoch 03 loss=0.0707 val_AUROC=0.6854
+      epoch 04 loss=0.0617 val_AUROC=0.7376
+      epoch 05 loss=0.0517 val_AUROC=0.7226
+      epoch 06 loss=0.0502 val_AUROC=0.7476
+      epoch 07 loss=0.0402 val_AUROC=0.7642
+      epoch 08 loss=0.0359 val_AUROC=0.7622
+      epoch 09 loss=0.0327 val_AUROC=0.7668
+      epoch 10 loss=0.0284 val_AUROC=0.7734
+      epoch 11 loss=0.0271 val_AUROC=0.7722
+      epoch 12 loss=0.0246 val_AUROC=0.7764
+      epoch 13 loss=0.0229 val_AUROC=0.7765
+      epoch 14 loss=0.0207 val_AUROC=0.7766
+      epoch 15 loss=0.0198 val_AUROC=0.7776
+      epoch 16 loss=0.0194 val_AUROC=0.7774
+      epoch 17 loss=0.0176 val_AUROC=0.7783
+      epoch 18 loss=0.0152 val_AUROC=0.7741
+      epoch 19 loss=0.0139 val_AUROC=0.7812
+      epoch 20 loss=0.0140 val_AUROC=0.7791
+      epoch 21 loss=0.0120 val_AUROC=0.7795
+      epoch 22 loss=0.0131 val_AUROC=0.7751
+      epoch 23 loss=0.0105 val_AUROC=0.7768
+      epoch 24 loss=0.0099 val_AUROC=0.7776
+      epoch 25 loss=0.0100 val_AUROC=0.7725
+      early stop at epoch 25
+[timed] head training (resnet50): 1.04s
+[timed] test+stability (resnet50): 5.74s
+  TEST resnet50: AUROC=0.8234 F1=0.5726 latFIS=0.7934 outFIS=0.9406 lat=4.9ms
+
+====================================================================
+Backbone: vit_b16
+====================================================================
+Downloading: "https://download.pytorch.org/models/vit_b_16_swag-9ac1b537.pth" to /Users/hwangjeyeong/.cache/torch/hub/checkpoints/vit_b_16_swag-9ac1b537.pth
+  0%|          | 0.00/331M [00:00<?, ?B/s]  0%|          | 128k/331M [00:00<11:50, 489kB/s]  0%|          | 256k/331M [00:00<09:39, 600kB/s]  0%|          | 384k/331M [00:00<08:49, 656kB/s]  0%|          | 768k/331M [00:00<04:45, 1.22MB/s]  0%|          | 1.62M/331M [00:01<02:17, 2.51MB/s]  1%|          | 3.12M/331M [00:01<01:16, 4.52MB/s]  2%|▏         | 6.25M/331M [00:01<00:38, 8.77MB/s]  3%|▎         | 9.50M/331M [00:01<00:24, 13.8MB/s]  3%|▎         | 11.1M/331M [00:01<00:24, 13.6MB/s]  4%|▍         | 14.0M/331M [00:01<00:21, 15.7MB/s]  5%|▌         | 17.6M/331M [00:01<00:19, 17.3MB/s]  6%|▋         | 21.5M/331M [00:02<00:14, 22.2MB/s]  7%|▋         | 23.9M/331M [00:02<00:15, 21.4MB/s]  8%|▊         | 26.1M/331M [00:02<00:16, 19.1MB/s]  9%|▉         | 29.5M/331M [00:02<00:16, 19.4MB/s] 10%|█         | 33.2M/331M [00:02<00:13, 23.7MB/s] 11%|█         | 35.8M/331M [00:02<00:13, 23.0MB/s] 12%|█▏        | 38.1M/331M [00:02<00:15, 20.4MB/s] 12%|█▏        | 41.2M/331M [00:03<00:15, 20.0MB/s] 14%|█▎        | 45.1M/331M [00:03<00:14, 20.6MB/s] 15%|█▍        | 49.0M/331M [00:03<00:14, 20.9MB/s] 16%|█▌        | 53.0M/331M [00:03<00:13, 21.3MB/s] 17%|█▋        | 56.9M/331M [00:03<00:13, 21.4MB/s] 18%|█▊        | 60.8M/331M [00:04<00:13, 21.5MB/s] 20%|█▉        | 64.6M/331M [00:04<00:12, 21.6MB/s] 21%|██        | 68.6M/331M [00:04<00:12, 21.8MB/s] 22%|██▏       | 72.5M/331M [00:04<00:12, 21.6MB/s] 23%|██▎       | 76.2M/331M [00:04<00:10, 24.9MB/s] 24%|██▍       | 78.9M/331M [00:04<00:11, 23.9MB/s] 25%|██▍       | 81.4M/331M [00:04<00:12, 21.3MB/s] 25%|██▌       | 84.2M/331M [00:05<00:12, 20.3MB/s] 27%|██▋       | 88.1M/331M [00:05<00:12, 20.7MB/s] 28%|██▊       | 91.4M/331M [00:05<00:12, 19.9MB/s] 29%|██▊       | 95.2M/331M [00:05<00:12, 20.5MB/s] 30%|██▉       | 99.1M/331M [00:05<00:11, 20.9MB/s] 31%|███       | 103M/331M [00:06<00:11, 21.0MB/s]  32%|███▏      | 107M/331M [00:06<00:11, 21.3MB/s] 33%|███▎      | 111M/331M [00:06<00:10, 21.6MB/s] 35%|███▍      | 115M/331M [00:06<00:10, 21.6MB/s] 36%|███▌      | 119M/331M [00:06<00:10, 21.7MB/s] 37%|███▋      | 123M/331M [00:07<00:10, 21.7MB/s] 38%|███▊      | 126M/331M [00:07<00:09, 21.7MB/s] 39%|███▉      | 130M/331M [00:07<00:09, 21.7MB/s] 41%|████      | 134M/331M [00:07<00:09, 21.7MB/s] 42%|████▏     | 138M/331M [00:07<00:09, 21.7MB/s] 43%|████▎     | 142M/331M [00:07<00:09, 21.8MB/s] 44%|████▍     | 146M/331M [00:08<00:08, 21.7MB/s] 45%|████▌     | 150M/331M [00:08<00:08, 21.7MB/s] 46%|████▋     | 154M/331M [00:08<00:08, 21.7MB/s] 48%|████▊     | 158M/331M [00:08<00:08, 21.8MB/s] 49%|████▉     | 162M/331M [00:08<00:08, 21.8MB/s] 50%|████▉     | 166M/331M [00:09<00:07, 21.9MB/s] 51%|█████     | 170M/331M [00:09<00:07, 21.8MB/s] 52%|█████▏    | 173M/331M [00:09<00:07, 21.7MB/s] 53%|█████▎    | 177M/331M [00:09<00:07, 21.7MB/s] 55%|█████▍    | 181M/331M [00:09<00:07, 21.8MB/s] 56%|█████▌    | 185M/331M [00:10<00:07, 21.7MB/s] 57%|█████▋    | 189M/331M [00:10<00:06, 21.7MB/s] 58%|█████▊    | 193M/331M [00:10<00:07, 20.7MB/s] 59%|█████▉    | 195M/331M [00:10<00:06, 20.7MB/s] 60%|██████    | 199M/331M [00:10<00:05, 26.0MB/s] 61%|██████    | 202M/331M [00:10<00:06, 22.5MB/s] 62%|██████▏   | 204M/331M [00:10<00:06, 20.3MB/s] 62%|██████▏   | 207M/331M [00:11<00:07, 18.2MB/s] 64%|██████▎   | 210M/331M [00:11<00:06, 19.3MB/s] 65%|██████▍   | 214M/331M [00:11<00:06, 20.1MB/s] 65%|██████▌   | 217M/331M [00:11<00:06, 18.4MB/s] 67%|██████▋   | 221M/331M [00:11<00:05, 19.4MB/s] 68%|██████▊   | 225M/331M [00:12<00:05, 20.1MB/s] 69%|██████▉   | 228M/331M [00:12<00:05, 19.4MB/s] 70%|██████▉   | 232M/331M [00:12<00:05, 20.2MB/s] 71%|███████   | 236M/331M [00:12<00:04, 20.7MB/s] 72%|███████▏  | 240M/331M [00:12<00:04, 20.8MB/s] 73%|███████▎  | 244M/331M [00:13<00:04, 21.1MB/s] 74%|███████▍  | 246M/331M [00:13<00:04, 19.6MB/s] 75%|███████▌  | 250M/331M [00:13<00:04, 19.2MB/s] 77%|███████▋  | 254M/331M [00:13<00:04, 20.1MB/s] 78%|███████▊  | 258M/331M [00:13<00:03, 20.2MB/s] 79%|███████▉  | 261M/331M [00:13<00:03, 20.6MB/s] 80%|████████  | 265M/331M [00:14<00:03, 21.1MB/s] 81%|████████  | 269M/331M [00:14<00:02, 23.9MB/s] 82%|████████▏ | 271M/331M [00:14<00:02, 23.2MB/s] 83%|████████▎ | 274M/331M [00:14<00:02, 20.3MB/s] 84%|████████▎ | 277M/331M [00:14<00:02, 19.9MB/s] 85%|████████▍ | 281M/331M [00:14<00:02, 20.7MB/s] 86%|████████▌ | 284M/331M [00:15<00:02, 19.2MB/s] 87%|████████▋ | 288M/331M [00:15<00:02, 20.1MB/s] 88%|████████▊ | 292M/331M [00:15<00:02, 20.6MB/s] 89%|████████▉ | 296M/331M [00:15<00:01, 20.9MB/s] 90%|█████████ | 299M/331M [00:15<00:01, 21.2MB/s] 92%|█████████▏| 303M/331M [00:16<00:01, 21.5MB/s] 93%|█████████▎| 307M/331M [00:16<00:01, 21.6MB/s] 94%|█████████▍| 311M/331M [00:16<00:00, 21.6MB/s] 95%|█████████▌| 315M/331M [00:16<00:00, 21.5MB/s] 96%|█████████▌| 317M/331M [00:16<00:00, 22.2MB/s] 96%|█████████▋| 320M/331M [00:16<00:00, 22.7MB/s] 97%|█████████▋| 323M/331M [00:16<00:00, 21.5MB/s] 99%|█████████▊| 327M/331M [00:17<00:00, 21.6MB/s]100%|█████████▉| 331M/331M [00:17<00:00, 21.7MB/s]100%|██████████| 331M/331M [00:17<00:00, 20.0MB/s]
+[timed] backbone-vit_b16 setup: 18.85s
+[timed] feature extraction (vit_b16): 27.37s
+      epoch 00 loss=0.2711 val_AUROC=0.6868
+      epoch 01 loss=0.0973 val_AUROC=0.7406
+      epoch 02 loss=0.0615 val_AUROC=0.7507
+      epoch 03 loss=0.0694 val_AUROC=0.7549
+      epoch 04 loss=0.0498 val_AUROC=0.7493
+      epoch 05 loss=0.0457 val_AUROC=0.7415
+      epoch 06 loss=0.0435 val_AUROC=0.7321
+      epoch 07 loss=0.0375 val_AUROC=0.7369
+      epoch 08 loss=0.0347 val_AUROC=0.7412
+      epoch 09 loss=0.0330 val_AUROC=0.7323
+      early stop at epoch 9
+[timed] head training (vit_b16): 0.45s
+[timed] test+stability (vit_b16): 42.72s
+  TEST vit_b16: AUROC=0.8230 F1=0.5995 latFIS=0.9006 outFIS=0.9689 lat=41.1ms
+
+====================================================================
+Backbone: clip_b32
+====================================================================
+/Users/hwangjeyeong/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/hwangjeyeong/Library/Python/3.9/lib/python/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+[timed] backbone-clip_b32 setup: 13.80s
+[timed] feature extraction (clip_b32): 3.33s
+      epoch 00 loss=0.5743 val_AUROC=0.6908
+      epoch 01 loss=0.2278 val_AUROC=0.7390
+      epoch 02 loss=0.1666 val_AUROC=0.7596
+      epoch 03 loss=0.1330 val_AUROC=0.7721
+      epoch 04 loss=0.1123 val_AUROC=0.7746
+      epoch 05 loss=0.0996 val_AUROC=0.7742
+      epoch 06 loss=0.0856 val_AUROC=0.7835
+      epoch 07 loss=0.0783 val_AUROC=0.7836
+      epoch 08 loss=0.0759 val_AUROC=0.7910
+      epoch 09 loss=0.0710 val_AUROC=0.7892
+      epoch 10 loss=0.0698 val_AUROC=0.7875
+      epoch 11 loss=0.0646 val_AUROC=0.7865
+      epoch 12 loss=0.0674 val_AUROC=0.7919
+      epoch 13 loss=0.0599 val_AUROC=0.7924
+      epoch 14 loss=0.0549 val_AUROC=0.7882
+      epoch 15 loss=0.0570 val_AUROC=0.7917
+      epoch 16 loss=0.0513 val_AUROC=0.7925
+      epoch 17 loss=0.0456 val_AUROC=0.7912
+      epoch 18 loss=0.0484 val_AUROC=0.7917
+      epoch 19 loss=0.0444 val_AUROC=0.7947
+      epoch 20 loss=0.0431 val_AUROC=0.7940
+      epoch 21 loss=0.0439 val_AUROC=0.7938
+      epoch 22 loss=0.0432 val_AUROC=0.7938
+      epoch 23 loss=0.0427 val_AUROC=0.7940
+      epoch 24 loss=0.0412 val_AUROC=0.7946
+      epoch 25 loss=0.0388 val_AUROC=0.7939
+      early stop at epoch 25
+[timed] head training (clip_b32): 0.89s
+[timed] test+stability (clip_b32): 5.67s
+  TEST clip_b32: AUROC=0.8543 F1=0.6391 latFIS=0.9454 outFIS=0.9626 lat=11.9ms
+
+====================================================================
+Backbone: dinov2
+====================================================================
+[timed] backbone-dinov2 setup: 9.19s
+[timed] feature extraction (dinov2): 10.34s
+      epoch 00 loss=0.3127 val_AUROC=0.6209
+      epoch 01 loss=0.0937 val_AUROC=0.7129
+      epoch 02 loss=0.0900 val_AUROC=0.7211
+      epoch 03 loss=0.0653 val_AUROC=0.7345
+      epoch 04 loss=0.0483 val_AUROC=0.7709
+      epoch 05 loss=0.0434 val_AUROC=0.7734
+      epoch 06 loss=0.0428 val_AUROC=0.7827
+      epoch 07 loss=0.0338 val_AUROC=0.7901
+      epoch 08 loss=0.0350 val_AUROC=0.7657
+      epoch 09 loss=0.0340 val_AUROC=0.7773
+      epoch 10 loss=0.0309 val_AUROC=0.7727
+      epoch 11 loss=0.0348 val_AUROC=0.7983
+      epoch 12 loss=0.0293 val_AUROC=0.7977
+      epoch 13 loss=0.0316 val_AUROC=0.7849
+      epoch 14 loss=0.0292 val_AUROC=0.8098
+      epoch 15 loss=0.0233 val_AUROC=0.8084
+      epoch 16 loss=0.0290 val_AUROC=0.7991
+      epoch 17 loss=0.0246 val_AUROC=0.8004
+      epoch 18 loss=0.0238 val_AUROC=0.7927
+      epoch 19 loss=0.0223 val_AUROC=0.8201
+      epoch 20 loss=0.0245 val_AUROC=0.8073
+      epoch 21 loss=0.0198 val_AUROC=0.8097
+      epoch 22 loss=0.0187 val_AUROC=0.7969
+      epoch 23 loss=0.0211 val_AUROC=0.8031
+      epoch 24 loss=0.0164 val_AUROC=0.8107
+      epoch 25 loss=0.0188 val_AUROC=0.7992
+      early stop at epoch 25
+[timed] head training (dinov2): 0.75s
+[timed] test+stability (dinov2): 15.84s
+  TEST dinov2: AUROC=0.8632 F1=0.5779 latFIS=0.8823 outFIS=0.9669 lat=12.0ms
+
+====================================================================
+Backbone: ffal
+====================================================================
+[timed] backbone-ffal setup: 0.86s
+      epoch 00 loss=0.3071 val_AUROC=0.6913
+      epoch 01 loss=0.1544 val_AUROC=0.7160
+      epoch 02 loss=0.1303 val_AUROC=0.7684
+      epoch 03 loss=0.1196 val_AUROC=0.7438
+      epoch 04 loss=0.1076 val_AUROC=0.7926
+      epoch 05 loss=0.1008 val_AUROC=0.7970
+      epoch 06 loss=0.1002 val_AUROC=0.7949
+      epoch 07 loss=0.0942 val_AUROC=0.7978
+      epoch 08 loss=0.1020 val_AUROC=0.7953
+      epoch 09 loss=0.1035 val_AUROC=0.7762
+      epoch 10 loss=0.0953 val_AUROC=0.7817
+      epoch 11 loss=0.0939 val_AUROC=0.7969
+      epoch 12 loss=0.0845 val_AUROC=0.8007
+      epoch 13 loss=0.0835 val_AUROC=0.8101
+      epoch 14 loss=0.0856 val_AUROC=0.7941
+[timed] ffal training: 728.67s
+[timed] test+stability (ffal): 15.61s
+  TEST ffal: AUROC=0.8483 F1=0.5564 latFIS=0.8882 outFIS=0.9610 lat=11.9ms
+
+Wrote /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/results/baselines_real.json
+Wrote /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/results/baselines_real_report.md
