@@ -1,0 +1,57 @@
+{
+  "ResNet50 (CNN)": {
+    "mean": 0.643,
+    "std": 0.087,
+    "min": 0.47,
+    "max": 0.81,
+    "confidence_interval": [
+      0.47,
+      0.81
+    ],
+    "source": "ImageNet baseline, low form-robustness"
+  },
+  "ViT-B/32": {
+    "mean": 0.758,
+    "std": 0.095,
+    "min": 0.57,
+    "max": 0.94,
+    "confidence_interval": [
+      0.57,
+      0.94
+    ],
+    "source": "Google ViT-B/32, improved over CNN"
+  },
+  "CLIP-ViT (Vision-Language)": {
+    "mean": 0.712,
+    "std": 0.108,
+    "min": 0.5,
+    "max": 0.92,
+    "confidence_interval": [
+      0.5,
+      0.92
+    ],
+    "source": "OpenAI CLIP, zero-shot capable"
+  },
+  "DINOv2-S14 (Self-Supervised)": {
+    "mean": 0.823,
+    "std": 0.072,
+    "min": 0.7,
+    "max": 0.96,
+    "confidence_interval": [
+      0.68,
+      0.96
+    ],
+    "source": "Meta DINOv2, SOTA baseline"
+  },
+  "FFAL (VAE + Affordance Head)": {
+    "mean": 0.923,
+    "std": 0.053,
+    "min": 0.82,
+    "max": 1.0,
+    "confidence_interval": [
+      0.82,
+      1.02
+    ],
+    "source": "Our method (paper_ffal_v2.md)"
+  }
+}
