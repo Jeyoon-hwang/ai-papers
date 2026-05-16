@@ -1,0 +1,34 @@
+{
+  "output_fis_cosine": {
+    "mean": 0.9970013591617947,
+    "std": 0.002236933080306084,
+    "min": 0.973018284116732,
+    "max": 0.9999868620005011,
+    "description": "Cosine similarity in output affordance space"
+  },
+  "output_stability_l2": {
+    "mean": 0.11700634802729146,
+    "std": 0.03424525936311427,
+    "max": 0.2752515809402558,
+    "percentile_95": 0.1762896357163331,
+    "description": "L2 Euclidean distance in output space"
+  },
+  "output_stability_kl": {
+    "mean": 0.004325034907677227,
+    "std": 0.00990696642814168,
+    "max": 1.4606951919062023,
+    "description": "KL divergence of output probability distributions"
+  },
+  "output_stability_mae": {
+    "mean": 0.03977618628294035,
+    "std": 0.012244377693945166,
+    "max": 0.10013474928927056,
+    "percentage_within_5percent": 80.184,
+    "description": "Mean Absolute Error as percentage points"
+  },
+  "latent_space_fis": {
+    "mean": 0.923,
+    "std": 0.053,
+    "description": "Latent space FIS from paper_ffal_v2"
+  }
+}
