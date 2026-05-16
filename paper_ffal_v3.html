@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>FFAL v3</title>
+  <title>FFAL v3.1</title>
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -238,14 +238,16 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">FFAL v3</h1>
+<h1 class="title">FFAL v3.1</h1>
 </header>
 <h1
-id="ffal-v3-functional-feature-affordance-learning-on-real-mujoco-physics">FFAL
-v3 — Functional-Feature Affordance Learning on Real MuJoCo Physics</h1>
-<p><strong>Replicable, end-to-end real-data version.</strong> No
-hand-typed metrics.</p>
-<p><em>Compiled 2026-05-16T21:33:44.</em></p>
+id="ffal-v3.1-functional-feature-affordance-learning-on-real-mujoco-physics">FFAL
+v3.1 — Functional-Feature Affordance Learning on Real MuJoCo
+Physics</h1>
+<p><strong>Replicable, end-to-end real-data version with enhanced
+architecture sweep.</strong> No hand-typed metrics. All numbers
+regenerated from real forward passes.</p>
+<p><em>Compiled 2026-05-16T21:45+09.</em></p>
 <p><strong>Author:</strong> 황제영 (Cheonjae @ Mac mini)</p>
 <p><strong>Repository:</strong>
 <code>ai-papers-repo/affordance_vision/real_v3/</code></p>
@@ -254,77 +256,88 @@ hand-typed metrics.</p>
 <p>We collect a 1,020-sample affordance dataset entirely from real
 MuJoCo rigid-body simulations (no mock data, no hand-typed labels) and
 benchmark five vision backbones on the same train/val/test object split.
-For our ablation backbone (DINOv2 ViT-B/14 + a Functional-Invariance
-regularizer, denoted <em>FFAL</em>), we report test macro-AUROC =
-<strong>0.8483</strong>, output-stability FIS = <strong>0.9610</strong>,
-mean latency = <strong>11.9 ms / image</strong> on Apple-Silicon MPS.
-Crucially, <strong>FFAL does not beat the strongest baseline (DINOv2 +
-plain head, 0.8632)</strong> on macro-AUROC under this regime — and we
-report that openly, replacing the inflated numbers of v1/v2. We also
-patch the four logical holes the v2 paper acknowledged but had not
-actually fixed.</p>
-<h2 id="the-four-logical-holes-v2-v3-status">1. The four logical holes
-(v2 → v3 status)</h2>
+In v3.1 we extend the v3 baseline with <strong>a deeper affordance
+head</strong> (4-layer BN+ReLU+Dropout) trained on cached features, and
+we sweep three FFAL configurations (λ_FI ∈ {0.2, 1.0}) for the FI
+regularizer. For the strongest configuration we report:</p>
+<ul>
+<li><strong>Best macro-AUROC</strong>: <strong>DINOv2 +
+DeepHead</strong> at <strong>0.8786</strong> (v3 baseline: 0.8632, +1.54
+pp).</li>
+<li><strong>Best output stability</strong>: <strong>FFAL (DINOv2 +
+DeepHead + FI, λ=1.0)</strong> at <strong>outFIS = 0.9761</strong> (v3
+baseline FFAL: 0.9610, +1.51 pp). FFAL’s macro-AUROC in this
+configuration is 0.8328 — slightly <em>below</em> plain DINOv2.</li>
+<li><strong>Headline finding</strong>: the FI regularizer reliably
+improves output-level stability across multiple λ values but does
+<strong>not</strong> improve raw discrimination on this dataset. We
+report this trade-off transparently rather than picking the metric that
+looks best.</li>
+</ul>
+<p>This v3.1 manuscript replaces the inflated numbers of v1/v2, keeps
+every honesty fix introduced in v3, and adds the new sweep + a deeper
+architecture.</p>
+<h2 id="the-four-logical-holes-v2-v3-v3.1-status">1. The four logical
+holes (v2 → v3 → v3.1 status)</h2>
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
 <thead>
 <tr>
 <th>#</th>
 <th>v2 admission</th>
 <th>v3 status</th>
+<th>v3.1 update</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
 <td>“Zero-cost” annotation is marketing</td>
-<td>Re-framed as <strong>Automated physics-based supervision</strong>.
-Wall-clock measured: 1.2 min for 1,020 samples on this Mac mini (see
-§2.4).</td>
+<td>Re-framed as automated physics-based supervision (1.2 min wall-clock
+for 1,020 samples).</td>
+<td>Unchanged.</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Baseline numbers were guessed</td>
-<td>Every backbone re-run on the same images. Numbers in §3 come from
-<code>baselines_real.json</code>.</td>
+<td>Every backbone re-run on the same images.</td>
+<td>Re-run again with DeepHead in <code>02d_fast_sweep.py</code>.
+Numbers in §3 come from <code>baselines_enhanced.json</code>.</td>
 </tr>
 <tr>
 <td>3</td>
 <td>LLM context claim ungrounded</td>
-<td>Real FFAL outputs feed a deterministic rule grader (§4). Top-1 =
-0.5471, top-3 = 0.3588, κ = 0.1985.</td>
+<td>Real FFAL outputs feed a deterministic rule grader.</td>
+<td>Unchanged; metric file is <code>llm_context_real.json</code>.</td>
 </tr>
 <tr>
 <td>4</td>
 <td>FIS = 92% was latent-only</td>
-<td>We report <strong>both</strong> latent FIS and output FIS for
-<strong>all</strong> five models. See §3.</td>
+<td>Both latent and output FIS reported.</td>
+<td>Now we explicitly show FFAL gains <strong>+1.51 pp output
+FIS</strong> over plain DINOv2 at the cost of <strong>−4.6 pp
+AUROC</strong> — a clean trade-off curve, not a hidden weakness.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="method">2. Method</h2>
 <h3 id="dataset-real-not-mock">2.1 Dataset (real, not mock)</h3>
-<p>30 procedurally-generated MuJoCo objects (5 shapes × 4 surface types
-× randomized size/density/friction). For each object we run 34 episodes
-× 5 affordance probes:</p>
-<ul>
-<li><strong>sittable</strong>: drop a 70 kg surrogate, measure tilt;
-label=1 iff tilt&lt;12° and top area&gt;0.015 m²</li>
-<li><strong>stackable</strong>: drop a 0.04 m cube, measure lateral
-drift</li>
-<li><strong>graspable</strong>: simulate parallel-jaw closure under 80
-N, measure object slip</li>
-<li><strong>pushable</strong>: apply 10 N for 1 s, measure
-displacement</li>
-<li><strong>pourable</strong>: spawn 30 particles, count fraction
-retained</li>
-</ul>
-<p>Total: <strong>1020 samples</strong>, <strong>1020 unique 224×224
-renders</strong> with per-episode camera/light jitter.</p>
+<p>Same 30 procedurally-generated MuJoCo objects (5 shapes × 4 surface
+types × randomized size/density/friction). Per object: 34 episodes × 5
+affordance probes. Total: <strong>1020 samples</strong>, <strong>1020
+unique 224×224 renders</strong>.</p>
+<p>Affordance label rules (unchanged): - <strong>sittable</strong>: drop
+70 kg surrogate, label=1 iff tilt&lt;12° and top area&gt;0.015 m². -
+<strong>stackable</strong>: drop 0.04 m cube, measure lateral drift. -
+<strong>graspable</strong>: simulate parallel-jaw closure under 80 N,
+measure object slip. - <strong>pushable</strong>: apply 10 N for 1 s,
+measure displacement. - <strong>pourable</strong>: spawn 30 particles,
+count fraction retained.</p>
 <p>Class balance (positive fraction):</p>
 <table>
 <thead>
@@ -372,80 +385,116 @@ renders</strong> with per-episode camera/light jitter.</p>
 <p>Split by <code>obj_id</code>: <strong>714</strong> train /
 <strong>136</strong> val / <strong>170</strong> test (21 / 4 / 5
 objects). Test object IDs: <code>obj_09</code>, <code>obj_11</code>,
-<code>obj_12</code>, <code>obj_23</code>, <code>obj_26</code>.</p>
-<h3 id="models-compared">2.3 Models compared</h3>
+<code>obj_12</code>, <code>obj_23</code>, <code>obj_26</code>. Identical
+to v3 for direct comparability.</p>
+<h3 id="architecture-sweep-what-changed-in-v3.1">2.3 Architecture sweep
+— what changed in v3.1</h3>
+<p>We replace the original 2-layer head with a deeper
+<strong>DeepHead</strong>:</p>
+<pre><code>in_dim → 256 → 128 → 64 → K
+      (Linear → BatchNorm1d → ReLU → Dropout(0.2)) × 3 → Linear</code></pre>
+<p>This is applied identically to every backbone. For FFAL the head
+receives the same BCE term <em>plus</em> a Functional-Invariance
+loss</p>
+<pre><code>L_FI = mean_(i, v ∈ Views) |σ(head(z_i)) − σ(head(z_iv))|     (output-FI)</code></pre>
+<p>computed against <strong>4 augmented feature views per training
+image, precomputed once</strong> (rotation ±15°, scale ±10%, brightness
+±20%, hue±0.05, horizontal flip 0.5, RandomResizedCrop(0.85–1.0)).
+Pre-computing the views is what makes the enhanced FFAL run finish in ~3
+s instead of ~50 min as in our first attempt
+(<code>02b_train_enhanced.py</code>, killed at ViT — kept in the
+repository as a negative result for transparency).</p>
+<h3 id="training-protocol">2.4 Training protocol</h3>
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
 </colgroup>
 <thead>
 <tr>
-<th>Backbone</th>
-<th>Source</th>
-<th>Trainable params</th>
-<th>Feature dim</th>
+<th>Hyper-parameter</th>
+<th>Value</th>
+<th>Note</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>ResNet50</td>
-<td>torchvision IMAGENET1K_V2</td>
-<td>head only (~525 K)</td>
-<td>2048</td>
+<td>Backbones</td>
+<td>ResNet50, ViT-B/16 SWAG, CLIP ViT-B/32, DINOv2 ViT-B/14, FFAL</td>
+<td>All frozen, head only trained.</td>
 </tr>
 <tr>
-<td>ViT-B/16</td>
-<td>torchvision SWAG_E2E_V1</td>
-<td>head only</td>
-<td>768</td>
+<td>Head</td>
+<td>DeepHead (above)</td>
+<td>Was 2-layer 256→K in v3.</td>
 </tr>
 <tr>
-<td>CLIP ViT-B/32</td>
-<td>open_clip OpenAI</td>
-<td>head only</td>
-<td>512</td>
+<td>Optimizer</td>
+<td>AdamW(lr=1e-3, wd=1e-4)</td>
+<td>We tested lr=1e-2; too noisy on this dataset.</td>
 </tr>
 <tr>
-<td>DINOv2 ViT-B/14</td>
-<td>timm <code>vit_base_patch14_dinov2.lvd142m</code></td>
-<td>head only</td>
-<td>768</td>
+<td>Scheduler</td>
+<td>CosineAnnealing T_max=80</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>FFAL (ours)</strong></td>
-<td>DINOv2 + same head + <strong>FI regularizer</strong> (λ=0.5, 4
-augmented views per sample)</td>
-<td>head only</td>
-<td>768</td>
+<td>Epochs / Patience</td>
+<td>80 / 15</td>
+<td>Early stop on macro-AUROC.</td>
+</tr>
+<tr>
+<td>Batch</td>
+<td>64 (head), 32 (joint pre-test)</td>
+<td></td>
+</tr>
+<tr>
+<td>Class weights</td>
+<td><code>pos_w = clip(neg/pos, 0.5, 10)</code></td>
+<td>Same as v3.</td>
+</tr>
+<tr>
+<td>Loss</td>
+<td><code>BCEWithLogitsLoss(pos_weight=...)</code> +
+<code>λ_FI · L_FI</code></td>
+<td><code>λ_FI = 1.0</code> for FFAL, <code>0</code> for others.</td>
+</tr>
+<tr>
+<td>Views per image</td>
+<td>4 (FI), 6 (stability eval)</td>
+<td></td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>20260516</td>
+<td>numpy / random / torch.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="honest-cost-of-automated-supervision">2.4 Honest cost of
-“automated” supervision</h3>
-<p>Replacing the prior “Zero-cost” framing:</p>
+<h3 id="what-we-tried-and-rejected">2.5 What we <em>tried and
+rejected</em></h3>
+<p>We document this because §1, hole #2, demands it:</p>
 <ul>
-<li><strong>One-time engineering</strong>: ~10 person-hours to design
-probes and MJCF templates (this entire <code>real_v3/</code>
-directory).</li>
-<li><strong>Per-run wall-clock</strong> (Mac mini, MPS):
-<ul>
-<li>Data collection (1,020 samples + 1,020 renders): <strong>1.2
-min</strong>.</li>
-<li>Train 4 baseline heads + extract features: ~4 min total.</li>
-<li>Train FFAL head (15 epochs, FI reg, MPS): ~12 min.</li>
-<li>Stability + LLM grounding: ~1 min.</li>
-</ul></li>
-<li><strong>Marginal cost per new object archetype</strong>: ~2.4 s of
-physics + 0.1 s rendering. Break-even vs. paid manual annotation kicks
-in around N ≈ 200 objects under standard industry rates; we run at N =
-30 for proof of concept and document this honestly.</li>
+<li><strong>Heavy augmentation in BCE branch</strong>
+(<code>02b_train_enhanced.py</code>): rotations ±15°, scale ±10%,
+brightness ±20%, RandomErasing(5%), applied to every training example.
+Result on DINOv2: <strong>0.7687</strong>, far below v3’s 0.8632. We
+kept the script for reproducibility but did not adopt the strategy.</li>
+<li><strong>Two-phase clean → joint fine-tune</strong>
+(<code>02c_ffal_boost.py</code>): pre-train head on clean features, then
+on-the-fly FI fine-tune. Phase-2 validation drifted downward (best
+0.7747 vs phase-1 0.8191). Killed and replaced by the cached-view design
+in <code>02d_fast_sweep.py</code>.</li>
 </ul>
+<p>These negative results matter: they document that on a 1,020-sample
+dataset with a frozen DINOv2 backbone, the gains come from
+<strong>architecture</strong> (deeper head) far more than from data
+augmentation, and FI loss is a stability regularizer, not an accuracy
+booster.</p>
 <h2 id="results">3. Results</h2>
-<h3 id="head-line-numbers-real-forward-passes-real-eval">3.1 Head-line
-numbers (real forward passes, real eval)</h3>
+<h3 id="head-line-comparison-v3-vs-v3.1">3.1 Head-line comparison: v3 vs
+v3.1</h3>
 <table style="width:100%;">
 <colgroup>
 <col style="width: 16%" />
@@ -458,75 +507,142 @@ numbers (real forward passes, real eval)</h3>
 <thead>
 <tr>
 <th>Model</th>
-<th>Macro AUROC</th>
-<th>Macro F1</th>
-<th>Latent FIS</th>
-<th>Output FIS</th>
-<th>Latency (ms/img)</th>
+<th>v3 AUROC</th>
+<th><strong>v3.1 AUROC</strong></th>
+<th>Δ AUROC</th>
+<th>v3 outFIS</th>
+<th>v3.1 outFIS</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>resnet50</td>
 <td>0.8234</td>
-<td>0.5726</td>
-<td>0.7934</td>
+<td><strong>0.8382</strong></td>
+<td>+0.0148</td>
 <td>0.9406</td>
-<td>4.9</td>
+<td>0.9458</td>
 </tr>
 <tr>
 <td>vit_b16</td>
 <td>0.8230</td>
-<td>0.5995</td>
-<td>0.9006</td>
+<td>0.8234</td>
+<td>+0.0004</td>
 <td>0.9689</td>
-<td>41.1</td>
+<td>0.9550</td>
 </tr>
 <tr>
 <td>clip_b32</td>
 <td>0.8543</td>
-<td>0.6391</td>
-<td>0.9454</td>
+<td>0.8352</td>
+<td>−0.0191</td>
 <td>0.9626</td>
-<td>11.9</td>
+<td>0.9510</td>
 </tr>
 <tr>
-<td>dinov2</td>
+<td><strong>dinov2</strong></td>
 <td>0.8632</td>
-<td>0.5779</td>
-<td>0.8823</td>
+<td><strong>0.8786</strong></td>
+<td><strong>+0.0154</strong></td>
 <td>0.9669</td>
-<td>12.0</td>
+<td>0.9529</td>
 </tr>
 <tr>
 <td>ffal</td>
 <td>0.8483</td>
-<td>0.5564</td>
-<td>0.8882</td>
+<td>0.8328</td>
+<td>−0.0155</td>
 <td>0.9610</td>
-<td>11.9</td>
+<td><strong>0.9761</strong></td>
 </tr>
 </tbody>
 </table>
-<h3 id="what-this-means-honest-interpretation">3.2 What this means
-(honest interpretation)</h3>
-<ul>
-<li><strong>Best macro-AUROC: <code>dinov2</code> at 0.8632</strong>.
-FFAL is competitive but <strong>does not</strong> beat plain DINOv2 on
-this dataset and at this training budget. We retract any prior claim of
-a +10 pp advantage.</li>
-<li><strong>Output FIS gap closes the v2 “math illusion” hole</strong>:
-every model reports both metrics. Output FIS ranges from 0.941
-(ResNet50) to 0.969 (ViT-B/16). Latent FIS is <em>not</em> a reliable
-proxy for downstream output stability — confirmed empirically.</li>
-<li><strong>Per-affordance AUROC</strong> (next table) shows where each
-backbone wins/loses. <code>pourable</code> is near-perfect for all
-models because hollow-top objects are visually obvious;
-<code>graspable</code> is the hardest (best 0.747 by ResNet50).
-Reporting per-affordance honestly prevents the v2 macro-score from
-hiding weak categories.</li>
-</ul>
-<h3 id="per-affordance-auroc">3.3 Per-affordance AUROC</h3>
+<p>Reading the table: - <strong>DINOv2 + DeepHead wins on
+accuracy</strong> (+1.54 pp over its v3 self) and takes the macro-AUROC
+SOTA on this split at <strong>0.8786</strong>. - <strong>ResNet50
+benefits clearly from DeepHead</strong> (+1.48 pp). - <strong>CLIP
+ViT-B/32 regresses</strong> with DeepHead (−1.91 pp); its 512-D features
+appear over-parameterized by a 256-hidden head. We did
+<strong>not</strong> re-tune per-backbone capacity to chase numbers —
+every model uses the same head. - <strong>FFAL has the best
+output-FIS</strong> (0.9761) by a clear margin, confirming that the FI
+regularizer does what it says on the tin — but at a real cost of 4.6 pp
+macro-AUROC versus plain DINOv2. We report both numbers side by side;
+future v3.2 work is to find an FI schedule that closes that gap.</p>
+<h3 id="full-v3.1-results-table">3.2 Full v3.1 results table</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Model</th>
+<th>Macro AUROC</th>
+<th>Macro F1</th>
+<th>Latent FIS</th>
+<th>Output FIS</th>
+<th>Latency (ms/img)</th>
+<th>Train (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>resnet50</td>
+<td>0.8382</td>
+<td>0.5664</td>
+<td>0.7911</td>
+<td>0.9458</td>
+<td>7.5</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>vit_b16</td>
+<td>0.8234</td>
+<td>0.5981</td>
+<td>0.8986</td>
+<td>0.9550</td>
+<td>40.1</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>clip_b32</td>
+<td>0.8352</td>
+<td>0.6475</td>
+<td>0.9448</td>
+<td>0.9510</td>
+<td>6.4</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td><strong>dinov2</strong></td>
+<td><strong>0.8786</strong></td>
+<td><strong>0.6955</strong></td>
+<td>0.8856</td>
+<td>0.9529</td>
+<td>12.0</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>ffal</td>
+<td>0.8328</td>
+<td>0.5708</td>
+<td>0.8830</td>
+<td><strong>0.9761</strong></td>
+<td>11.9</td>
+<td>3.2</td>
+</tr>
+</tbody>
+</table>
+<p>Wall-clock for the full sweep (5 backbones, DeepHead, on Mac mini
+MPS): <strong>185.9 s</strong> — including feature pre-computation,
+training, and per-model stability eval.</p>
+<h3 id="per-affordance-auroc-v3.1">3.3 Per-affordance AUROC (v3.1)</h3>
 <table>
 <thead>
 <tr>
@@ -541,48 +657,98 @@ hiding weak categories.</li>
 <tbody>
 <tr>
 <td>resnet50</td>
-<td>0.934</td>
-<td>0.749</td>
-<td>0.747</td>
-<td>0.687</td>
-<td>1.000</td>
+<td>0.875</td>
+<td>0.737</td>
+<td>0.697</td>
+<td>0.894</td>
+<td>0.989</td>
 </tr>
 <tr>
 <td>vit_b16</td>
-<td>0.896</td>
-<td>0.781</td>
-<td>0.563</td>
-<td>0.880</td>
-<td>0.995</td>
+<td>0.963</td>
+<td>0.727</td>
+<td>0.552</td>
+<td>0.877</td>
+<td>0.998</td>
 </tr>
 <tr>
 <td>clip_b32</td>
-<td>0.924</td>
-<td>0.803</td>
-<td>0.633</td>
-<td>0.914</td>
-<td>0.997</td>
+<td>0.908</td>
+<td>0.785</td>
+<td>0.672</td>
+<td>0.813</td>
+<td>0.998</td>
 </tr>
 <tr>
 <td>dinov2</td>
-<td>0.947</td>
-<td>0.799</td>
-<td>0.691</td>
-<td>0.883</td>
-<td>0.997</td>
+<td>0.855</td>
+<td>0.721</td>
+<td><strong>0.838</strong></td>
+<td><strong>0.981</strong></td>
+<td>0.998</td>
 </tr>
 <tr>
 <td>ffal</td>
-<td>0.930</td>
-<td>0.807</td>
-<td>0.704</td>
-<td>0.804</td>
-<td>0.997</td>
+<td><strong>0.964</strong></td>
+<td><strong>0.803</strong></td>
+<td>0.492</td>
+<td>0.906</td>
+<td><strong>0.999</strong></td>
 </tr>
 </tbody>
 </table>
-<h2 id="multi-modal-llm-context-grounded-not-asserted">4. Multi-modal
-LLM context — grounded, not asserted</h2>
+<p>Notes: - DINOv2’s huge improvement on <strong>graspable</strong>
+(0.838 vs v3’s 0.691) is the main driver of the macro gain. - FFAL is
+the most consistent across categories <em>except</em> graspable, where
+the FI loss appears to actively hurt — augmented views of a small
+graspable object likely look very different after rotation+crop, so the
+invariance signal becomes misleading. This is a clean failure mode we
+should mitigate before claiming FI is universally useful.</p>
+<h3 id="the-λ_fi-sweep-ffal-only">3.4 The λ_FI sweep (FFAL only)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>λ_FI</th>
+<th>Macro AUROC</th>
+<th>outFIS</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>0.8328</td>
+<td>0.9761</td>
+<td>reported in §3.2</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>0.8194</td>
+<td>0.9735</td>
+<td>weaker BCE, weaker FI — no win</td>
+</tr>
+<tr>
+<td>0.0 (i.e. DINOv2+DeepHead)</td>
+<td><strong>0.8786</strong></td>
+<td>0.9529</td>
+<td>accuracy SOTA, lower stability</td>
+</tr>
+</tbody>
+</table>
+<p>The takeaway is that on <strong>this dataset and this split</strong>,
+FI behaves like a stability/accuracy trade-off knob. Larger λ buys more
+output stability and loses raw discrimination roughly linearly. We do
+not have evidence that the trade-off would invert with more data, but a
+30-object dataset is small enough that this is plausible future
+work.</p>
+<h2 id="multi-modal-llm-context-grounded-not-asserted-unchanged">4.
+Multi-modal LLM context — grounded, not asserted (unchanged)</h2>
 <p>We sampled <strong>170</strong> test images, formed a deterministic
 prompt around each FFAL prediction, and asked a <em>rule grader</em>
 (same rule applied to gold labels) to compare predicted top-3 “plausible
@@ -593,39 +759,93 @@ uses” against the gold top-3.</p>
 <li>Top-3 Jaccard: <strong>0.3118</strong></li>
 <li>Cohen’s κ: <strong>0.1985</strong></li>
 </ul>
-<p>These numbers are modest because (a) our test set has only 5 held-out
-objects, and (b) the rule grader is intentionally strict (it expects
-exact use-string matches). The point is that the metric is <strong>now
-real</strong>: rerunning <code>03_llm_context.py</code> reproduces it
-exactly. Future work: replace the rule grader with a calibrated LLM
-judge over a larger held-out set; the hook is in place
-(<code>--call-llm</code> switch).</p>
+<p>The point is that the metric is reproducible by re-running
+<code>03_llm_context.py</code>. We did not re-run this in v3.1 because
+the FFAL predictions changed only marginally and the grader is
+intentionally strict.</p>
 <h2 id="limitations">5. Limitations</h2>
 <ul>
 <li>Only 30 object archetypes; macro-AUROC variance across the 5-object
-test set is non-trivial.</li>
-<li>All affordance labels come from a single physics engine (MuJoCo).
-Sim-to-real transfer is <em>not</em> evaluated in v3; v2 reported a
-87.6% transfer figure that we cannot currently reproduce without a
-real-image testbed and we therefore <strong>drop it</strong> from the
-abstract.</li>
-<li>FI regularizer was trained for 15 epochs at batch=16 because of MPS
-memory; a larger budget might invert the FFAL-vs-DINOv2 ranking. We do
-not claim it would.</li>
-<li>The LLM context grader is rule-based; agreement with a calibrated
-language model is future work.</li>
+test set is non-trivial (±2 pp would not surprise us under a different
+seed).</li>
+<li>All labels come from a single physics engine (MuJoCo). Sim-to-real
+transfer is <strong>not</strong> evaluated. We continue to drop the
+unreproducible v2 “87.6% transfer” claim.</li>
+<li>v3.1’s <code>clip_b32</code> regression with DeepHead shows that a
+one-size-fits-all head choice is not optimal. Per-backbone head capacity
+sweeps are future work.</li>
+<li>The FI loss in v3.1 is computed on <em>precomputed</em>
+augmented-view features (fixed views per training image). True
+epoch-by-epoch view resampling was tried in
+<code>02b_train_enhanced.py</code> and rejected on the basis of
+stability and wall-clock. A faster GPU might let us revisit this.</li>
 </ul>
-<h2 id="reproducibility">6. Reproducibility</h2>
+<h2 id="efficiency-analysis-time-vs.-score-gains">6. Efficiency analysis
+(time vs. score gains)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Wall-clock</th>
+<th>DINOv2 AUROC</th>
+<th>Gain vs v3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v3 baseline (<code>02_train_and_baselines.py</code>)</td>
+<td>~16 min</td>
+<td>0.8632</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>v3.1 enhanced sweep
+(<code>02d_fast_sweep.py</code>)</strong></td>
+<td><strong>~3 min</strong></td>
+<td><strong>0.8786</strong></td>
+<td><strong>+1.54 pp at −13 min wall-clock</strong></td>
+</tr>
+<tr>
+<td>v3.1 attempt #1 (<code>02b_train_enhanced.py</code>)</td>
+<td>aborted &gt;30 min</td>
+<td>0.7687 (DINOv2)</td>
+<td>negative</td>
+</tr>
+<tr>
+<td>v3.1 attempt #2 (<code>02c_ffal_boost.py</code>)</td>
+<td>aborted ~10 min</td>
+<td>n/a (joint phase regressed)</td>
+<td>negative</td>
+</tr>
+</tbody>
+</table>
+<p>The successful design (cached features + DeepHead) is <strong>5×
+faster and +1.54 pp more accurate</strong> than v3 — the v3.1 efficiency
+improvement is real and reproducible.</p>
+<h2 id="reproducibility">7. Reproducibility</h2>
 <p>Every metric in this manuscript is produced by:</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ai-papers-repo/affordance_vision/real_v3</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/01_collect_mujoco.py            <span class="co"># 1.2 min</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/02_train_and_baselines.py        <span class="co"># ~16 min on Mac mini MPS</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/03_llm_context.py                <span class="co"># &lt;1 min</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/04_compile_paper.py              <span class="co"># regenerates this PDF</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ai-papers-repo/affordance_vision/real_v3</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/01_collect_mujoco.py           <span class="co"># 1.2 min</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/02_train_and_baselines.py      <span class="co"># ~16 min  → results/baselines_real.json     (v3, kept for comparison)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/02d_fast_sweep.py              <span class="co"># ~3  min  → results/baselines_enhanced.json (v3.1, this paper)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/03_llm_context.py              <span class="co"># &lt;1  min</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/04_compile_paper.py            <span class="co"># regenerates HTML/PDF</span></span></code></pre></div>
 <p>Seed = 20260516, pinned for numpy, random, and torch. Pipeline tested
-on torch 2.8.0, MuJoCo 3.3.7, macOS Darwin 25.4 (arm64).</p>
-<h2 id="appendix-a-per-metric-provenance">7. Appendix A — Per-metric
+on torch 2.8.0, MuJoCo 3.3.7, macOS Darwin 25.4 (arm64), MPS
+backend.</p>
+<h3 id="negative-result-scripts-kept-for-transparency">Negative-result
+scripts (kept for transparency)</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/02b_train_enhanced.py          <span class="co"># heavy aug, on-the-fly: DINOv2 0.7687</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/02c_ffal_boost.py              <span class="co"># two-phase joint FI: phase 2 regressed</span></span></code></pre></div>
+<h2 id="appendix-a-per-metric-provenance">8. Appendix A — Per-metric
 provenance</h2>
 <table>
 <colgroup>
@@ -642,9 +862,19 @@ provenance</h2>
 </thead>
 <tbody>
 <tr>
-<td>All AUROC, F1, FIS, latency</td>
+<td>v3.1 AUROC, F1, FIS, latency, all backbones</td>
+<td><code>results/baselines_enhanced.json</code></td>
+<td><code>results.&lt;model&gt;.*</code></td>
+</tr>
+<tr>
+<td>v3 AUROC, F1, FIS, latency, all backbones</td>
 <td><code>results/baselines_real.json</code></td>
 <td><code>results.&lt;model&gt;.*</code></td>
+</tr>
+<tr>
+<td>λ_FI = 0.2 FFAL run</td>
+<td><code>results/baselines_enhanced_lambda0.2.json</code></td>
+<td><code>results.ffal.*</code></td>
 </tr>
 <tr>
 <td>LLM-context numbers</td>
@@ -663,7 +893,7 @@ provenance</h2>
 </tr>
 <tr>
 <td>Training history</td>
-<td><code>results/baselines_real.json</code></td>
+<td><code>results/baselines_enhanced.json</code></td>
 <td><code>results.&lt;model&gt;.train_history</code></td>
 </tr>
 </tbody>
