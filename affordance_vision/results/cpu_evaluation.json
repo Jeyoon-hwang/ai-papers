@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-05-16T21:00:00+09:00",
+  "device": "CPU only (no GPU)",
+  "framework": "PyBullet + NumPy VAE",
+  "in_distribution": {
+    "overall_accuracy": 0.968,
+    "form_independence_score": 0.923,
+    "notes": "PyBullet CPU simulation"
+  },
+  "sim_to_real": {
+    "zero_shot_accuracy": 0.876,
+    "domain_gap": 0.09199999999999997
+  },
+  "latency": {
+    "affordance_vector_ms": 90,
+    "full_pipeline_ms": 555,
+    "notes": "CPU execution, no GPU required"
+  },
+  "computation": {
+    "total_time_hours": 2.5,
+    "data_collection_minutes": 40,
+    "training_minutes": 90,
+    "evaluation_minutes": 10
+  }
+}
