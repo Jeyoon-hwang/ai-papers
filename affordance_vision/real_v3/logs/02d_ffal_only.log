@@ -1,0 +1,33 @@
+
+====================================================================
+FAST SWEEP device=mps backbones=['ffal']
+====================================================================
+split: train=714 val=136 test=170
+
+====================================================================
+Backbone: ffal (DeepHead)
+====================================================================
+/Users/hwangjeyeong/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[timed] setup-ffal: 0.99s
+[timed] precompute-clean-ffal: 10.26s
+      precomputed views batch 0/23
+      precomputed views batch 5/23
+      precomputed views batch 10/23
+      precomputed views batch 15/23
+      precomputed views batch 20/23
+[timed] precompute-views-ffal: 37.56s
+  fi_views shape=(714, 4, 768)  lambda_fi=0.2
+      e000 loss=0.6109 fi=0.0811 val=0.5938
+      e005 loss=0.1769 fi=0.0530 val=0.6968
+      e010 loss=0.0987 fi=0.0386 val=0.7611
+      e015 loss=0.0691 fi=0.0316 val=0.6683
+      e020 loss=0.0537 fi=0.0276 val=0.7168
+      e025 loss=0.0489 fi=0.0280 val=0.7007
+      e030 loss=0.0429 fi=0.0223 val=0.7672
+      early stop at 31
+  best val=0.7869 at epoch 16 in 2.4s
+[timed] test+stability-ffal: 15.40s
+  TEST ffal: AUROC=0.8194 F1=0.5752 latFIS=0.8834 outFIS=0.9735 lat=12.1ms
+
+Wrote /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/results/baselines_enhanced.json

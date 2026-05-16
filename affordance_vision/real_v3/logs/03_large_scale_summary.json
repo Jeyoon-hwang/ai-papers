@@ -1,0 +1,33 @@
+{
+  "n_objects": 100,
+  "n_episodes": 100,
+  "n_samples": 10000,
+  "total_time_s": 133.76993680000305,
+  "new_renders": 0,
+  "render_errors": 0,
+  "probe_errors": 0,
+  "workers": 11,
+  "class_balance": {
+    "sittable": {
+      "neg": 6378,
+      "pos": 3622
+    },
+    "stackable": {
+      "neg": 5672,
+      "pos": 4328
+    },
+    "graspable": {
+      "neg": 7800,
+      "pos": 2200
+    },
+    "pushable": {
+      "neg": 5500,
+      "pos": 4500
+    },
+    "pourable": {
+      "neg": 9095,
+      "pos": 905
+    }
+  },
+  "data_path": "data/v32/affordances_v32.jsonl"
+}

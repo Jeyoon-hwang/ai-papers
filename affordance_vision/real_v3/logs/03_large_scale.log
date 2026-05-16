@@ -1,0 +1,112 @@
+workers=11, cpu_count=12
+data_dir=/Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/data/v32
+catalog written: 100 objects
+  [  1/100] obj_004 8.4s | total 8.6s | eta 854s
+  [  2/100] obj_009 10.3s | total 10.5s | eta 513s
+  [  3/100] obj_002 11.1s | total 11.3s | eta 365s
+  [  4/100] obj_007 11.3s | total 11.5s | eta 275s
+  [  5/100] obj_003 12.7s | total 12.9s | eta 245s
+  [  6/100] obj_000 15.4s | total 15.5s | eta 244s
+  [  7/100] obj_005 15.7s | total 15.8s | eta 210s
+  [  8/100] obj_006 16.0s | total 16.2s | eta 186s
+  [  9/100] obj_008 16.0s | total 16.2s | eta 164s
+  [ 10/100] obj_001 16.2s | total 16.3s | eta 147s
+  [ 11/100] obj_010 17.1s | total 17.3s | eta 140s
+  [ 12/100] obj_019 5.6s | total 21.8s | eta 160s
+  [ 13/100] obj_012 12.2s | total 22.7s | eta 152s
+  [ 14/100] obj_014 12.3s | total 23.8s | eta 146s
+  [ 15/100] obj_013 13.4s | total 24.7s | eta 140s
+  [ 16/100] obj_011 18.3s | total 26.9s | eta 141s
+  [ 17/100] obj_017 13.3s | total 29.1s | eta 142s
+  [ 18/100] obj_024 5.4s | total 29.1s | eta 133s
+  [ 19/100] obj_018 14.3s | total 30.4s | eta 130s
+  [ 20/100] obj_015 18.1s | total 31.0s | eta 124s
+  [ 21/100] obj_020 16.5s | total 32.8s | eta 124s
+  [ 22/100] obj_016 17.4s | total 32.9s | eta 117s
+  [ 23/100] obj_021 16.6s | total 34.0s | eta 114s
+  [ 24/100] obj_022 12.4s | total 34.2s | eta 108s
+  [ 25/100] obj_023 13.3s | total 36.0s | eta 108s
+  [ 26/100] obj_029 7.4s | total 37.9s | eta 108s
+  [ 27/100] obj_025 16.5s | total 41.2s | eta 111s
+  [ 28/100] obj_027 12.3s | total 41.4s | eta 107s
+  [ 29/100] obj_028 13.3s | total 42.4s | eta 104s
+  [ 30/100] obj_034 8.9s | total 43.1s | eta 101s
+  [ 31/100] obj_026 16.6s | total 43.5s | eta 97s
+  [ 32/100] obj_032 12.3s | total 45.2s | eta 96s
+  [ 33/100] obj_030 17.9s | total 48.9s | eta 99s
+  [ 34/100] obj_031 17.0s | total 49.9s | eta 97s
+  [ 35/100] obj_033 17.4s | total 51.4s | eta 95s
+  [ 36/100] obj_039 11.9s | total 54.3s | eta 97s
+  [ 37/100] obj_035 18.6s | total 54.6s | eta 93s
+  [ 38/100] obj_037 13.4s | total 54.7s | eta 89s
+  [ 39/100] obj_036 17.3s | total 55.2s | eta 86s
+  [ 40/100] obj_042 11.9s | total 57.2s | eta 86s
+  [ 41/100] obj_041 16.4s | total 60.0s | eta 86s
+  [ 42/100] obj_049 5.6s | total 60.8s | eta 84s
+  [ 43/100] obj_040 17.9s | total 61.0s | eta 81s
+  [ 44/100] obj_038 19.9s | total 61.3s | eta 78s
+  [ 45/100] obj_044 12.1s | total 62.0s | eta 76s
+  [ 46/100] obj_043 13.4s | total 62.3s | eta 73s
+  [ 47/100] obj_047 12.1s | total 66.7s | eta 75s
+  [ 48/100] obj_045 16.1s | total 67.5s | eta 73s
+  [ 49/100] obj_054 7.6s | total 68.9s | eta 72s
+  [ 50/100] obj_048 15.0s | total 69.7s | eta 70s
+  [ 51/100] obj_046 16.3s | total 70.6s | eta 68s
+  [ 52/100] obj_052 12.6s | total 73.5s | eta 68s
+  [ 53/100] obj_059 5.5s | total 74.4s | eta 66s
+  [ 54/100] obj_050 17.8s | total 75.0s | eta 64s
+  [ 55/100] obj_051 17.7s | total 77.7s | eta 64s
+  [ 56/100] obj_055 17.9s | total 79.9s | eta 63s
+  [ 57/100] obj_057 13.6s | total 80.3s | eta 61s
+  [ 58/100] obj_056 18.2s | total 80.5s | eta 58s
+  [ 59/100] obj_053 20.1s | total 81.1s | eta 56s
+  [ 60/100] obj_058 15.7s | total 83.2s | eta 55s
+  [ 61/100] obj_062 12.1s | total 85.5s | eta 55s
+  [ 62/100] obj_064 11.2s | total 86.2s | eta 53s
+  [ 63/100] obj_060 16.9s | total 86.6s | eta 51s
+  [ 64/100] obj_061 17.1s | total 87.7s | eta 49s
+  [ 65/100] obj_069 8.2s | total 89.3s | eta 48s
+  [ 66/100] obj_063 15.7s | total 90.2s | eta 46s
+  [ 67/100] obj_067 13.6s | total 94.0s | eta 46s
+  [ 68/100] obj_068 13.6s | total 94.1s | eta 44s
+  [ 69/100] obj_065 17.9s | total 95.6s | eta 43s
+  [ 70/100] obj_074 8.7s | total 96.5s | eta 41s
+  [ 71/100] obj_066 17.2s | total 97.1s | eta 40s
+  [ 72/100] obj_072 13.4s | total 99.7s | eta 39s
+  [ 73/100] obj_073 14.0s | total 100.6s | eta 37s
+  [ 74/100] obj_070 18.2s | total 101.5s | eta 36s
+  [ 75/100] obj_079 6.6s | total 102.2s | eta 34s
+  [ 76/100] obj_071 17.9s | total 103.5s | eta 33s
+  [ 77/100] obj_077 14.0s | total 107.9s | eta 32s
+  [ 78/100] obj_075 19.2s | total 108.5s | eta 31s
+  [ 79/100] obj_076 18.8s | total 109.0s | eta 29s
+  [ 80/100] obj_084 7.5s | total 109.0s | eta 27s
+  [ 81/100] obj_082 12.3s | total 112.0s | eta 26s
+  [ 82/100] obj_080 17.0s | total 113.4s | eta 25s
+  [ 83/100] obj_081 17.2s | total 114.3s | eta 23s
+  [ 84/100] obj_078 20.2s | total 114.3s | eta 22s
+  [ 85/100] obj_083 15.3s | total 116.0s | eta 20s
+  [ 86/100] obj_085 17.5s | total 119.6s | eta 19s
+  [ 87/100] obj_086 16.7s | total 120.2s | eta 18s
+  [ 88/100] obj_094 6.6s | total 120.9s | eta 16s
+  [ 89/100] obj_089 12.7s | total 121.6s | eta 15s
+  [ 90/100] obj_087 13.9s | total 121.9s | eta 14s
+  [ 91/100] obj_088 16.4s | total 124.9s | eta 12s
+  [ 92/100] obj_092 12.9s | total 126.3s | eta 11s
+  [ 93/100] obj_090 18.3s | total 127.3s | eta 10s
+  [ 94/100] obj_093 14.4s | total 128.6s | eta 8s
+  [ 95/100] obj_091 17.2s | total 129.2s | eta 7s
+  [ 96/100] obj_099 9.4s | total 131.0s | eta 5s
+  [ 97/100] obj_097 11.9s | total 132.0s | eta 4s
+  [ 98/100] obj_095 16.3s | total 132.3s | eta 3s
+  [ 99/100] obj_096 13.9s | total 133.5s | eta 1s
+  [100/100] obj_098 12.8s | total 133.6s | eta 0s
+new renders: 0, render errors: 0, probe errors: 0
+output: /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/data/v32/affordances_v32.jsonl
+
+Class balance:
+  sittable   pos= 3622 (36.22%), neg= 6378
+  stackable  pos= 4328 (43.28%), neg= 5672
+  graspable  pos= 2200 (22.00%), neg= 7800
+  pushable   pos= 4500 (45.00%), neg= 5500
+  pourable   pos=  905 (9.05%), neg= 9095

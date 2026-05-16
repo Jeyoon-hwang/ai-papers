@@ -1,0 +1,36 @@
+{
+  "dataset": "v3.2 (10,000 samples)",
+  "total_objects": 100,
+  "variants_per_object": 100,
+  "total_train_time": "46 minutes",
+  "models": {
+    "ResNet50": {
+      "AUROC": 0.8254,
+      "outFIS": 0.9269
+    },
+    "ViT-B/16": {
+      "AUROC": 0.8818,
+      "outFIS": 0.9594
+    },
+    "CLIP-B/32": {
+      "AUROC": 0.8478,
+      "outFIS": 0.9464
+    },
+    "DINOv2": {
+      "AUROC": 0.8969,
+      "outFIS": 0.9287
+    },
+    "FFAL (\u03bb=0.5 orig)": {
+      "AUROC": 0.7772,
+      "outFIS": 0.9709
+    },
+    "FFAL (\u03bb=0.1 opt)": {
+      "AUROC": 0.852,
+      "outFIS": 0.9745
+    }
+  },
+  "best_auroc": "DINOv2 (0.8969)",
+  "best_form_robustness": "FFAL \u03bb=0.1 (0.9745)",
+  "ffal_improvement": "+7.48pp AUROC with \u03bb=0.1",
+  "recommendation": "Use \u03bb_FI=0.1 for robotics (balance accuracy + robustness)"
+}

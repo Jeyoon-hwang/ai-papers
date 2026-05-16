@@ -1,0 +1,53 @@
+epochs=500 batch=128 lr=0.001 wd=0.0001 patience=50 lambda_fi=0.5 n_views_fi=4
+loaded 10000 rows from /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/data/v32/affordances_v32.jsonl
+split: train=7000 val=1500 test=1500 objects: train=70 val=15 test=15
+      [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.7021 val_AUROC=0.8235 lr=0.00100
+      epoch 020 loss=0.2902 val_AUROC=0.8781 lr=0.00100
+      epoch 040 loss=0.5588 val_AUROC=0.8726 lr=0.00098
+      epoch 060 loss=0.6186 val_AUROC=0.7244 lr=0.00096
+      epo      epoch 040 bce=0.2897 fi=0.0337 val_AUROC=      e      epoch 060 bce=0.2435 fi=0.0308 val_AUROC=  TEST       epoch 080 bce=0.2242 fi=0.0291 val_AUROC=0.8565
+      epoch 100 bce=0.1760 fi=0.0203       [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.6825 val_AUROC=0.8256 lr=0.00100
+      epoch 020 loss=0.2144 val_AUROC=0.8560 lr=0.00100
+      epoch 040 loss=0.1780 val_AUROC=0.8524 lr=0.00098
+      early stop at epoch 58 (best 0.8650 @ epoch 8)
+  TEST vit_b16 (v3.2): AUROC=0.8818 F1=0.6965 latFIS=0.9002 outFIS=0.9594 lat=39.0ms train=700.1s
+      [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.7028 val_AUROC=0.8187 lr=0.00100
+      epoch 020 loss=0.2781 val_AUROC=0.8659 lr=0.00100
+      epoch 040 loss=0.2240 val_AUROC=0.8612 lr=0.00098
+      epoch 060 loss=0.2402 val_AUROC=0.8552 lr=0.00096
+      early stop at epoch 79 (best 0.8752 @ epoch 29)
+  TEST clip_b32 (v3.2): AUROC=0.8478 F1=0.6666 latFIS=0.9486 outFIS=0.9464 lat=3.8ms train=136.2s
+      [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.6467 val_AUROC=0.8534 lr=0.00100
+      epoch 020 loss=0.2038 val_AUROC=0.8608 lr=0.00100
+      epoch 040 loss=0.1757 val_AUROC=0.8534 lr=0.00098
+      epoch 060 loss=0.1238 val_AUROC=0.8692 lr=0.00096
+      epoch 080 loss=0.1201 val_AUROC=0.8574 lr=0.00094
+      early stop at epoch 81 (best 0.9033 @ epoch 31)
+  TEST dinov2 (v3.2): AUROC=0.8969 F1=0.7376 latFIS=0.8927 outFIS=0.9287 lat=11.8ms train=277.1s
+      [ffal-train] feature precompute pass 1/2 done
+      [ffal-train] feature precompute pass 2/2 done
+      [ffal-val] feature precompute pass 1/1 done
+      [ffal-fi-views] feature precompute pass 1/4 done
+      [ffal-fi-views] feature precompute pass 2/4 done
+      [ffal-fi-views] feature precompute pass 3/4 done
+      [ffal-fi-views] feature precompute pass 4/4 done
+      epoch 000 bce=0.7917 fi=0.1112 val_AUROC=0.7508
+      epoch 020 bce=nan fi=nan val_AUROC=0.5889
+      epoch 040 bce=nan fi=nan val_AUROC=0.5889
+      epoch 060 bce=nan fi=nan val_AUROC=0.5889
+      early stop at epoch 67 (best 0.8722 @ epoch 17)
+  TEST ffal (v3.2): AUROC=0.7772 F1=0.6497 latFIS=0.8923 outFIS=0.9709 lat=11.8ms train=663.0s
+
+Wrote /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/results/baselines_v32_10k.json  (total 46.0 min)

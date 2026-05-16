@@ -1,0 +1,101 @@
+
+====================================================================
+FAST SWEEP device=mps backbones=['resnet50', 'vit_b16', 'clip_b32', 'dinov2', 'ffal']
+====================================================================
+split: train=714 val=136 test=170
+
+====================================================================
+Backbone: resnet50 (DeepHead)
+====================================================================
+[timed] setup-resnet50: 0.29s
+[timed] precompute-clean-resnet50: 3.33s
+      e000 loss=0.5706 fi=0.0000 val=0.6591
+      e005 loss=0.1667 fi=0.0000 val=0.7080
+      e010 loss=0.0971 fi=0.0000 val=0.7988
+      e015 loss=0.0659 fi=0.0000 val=0.7824
+      e020 loss=0.0592 fi=0.0000 val=0.7853
+      e025 loss=0.0427 fi=0.0000 val=0.7551
+      e030 loss=0.0309 fi=0.0000 val=0.7639
+      early stop at 33
+  best val=0.8319 at epoch 18 in 1.3s
+[timed] test+stability-resnet50: 5.78s
+  TEST resnet50: AUROC=0.8382 F1=0.5664 latFIS=0.7911 outFIS=0.9458 lat=7.5ms
+
+====================================================================
+Backbone: vit_b16 (DeepHead)
+====================================================================
+[timed] setup-vit_b16: 0.29s
+[timed] precompute-clean-vit_b16: 26.18s
+      e000 loss=0.5910 fi=0.0000 val=0.5126
+      e005 loss=0.1755 fi=0.0000 val=0.7202
+      e010 loss=0.1001 fi=0.0000 val=0.7187
+      e015 loss=0.0679 fi=0.0000 val=0.7337
+      e020 loss=0.0533 fi=0.0000 val=0.6963
+      early stop at 24
+  best val=0.7733 at epoch 9 in 0.8s
+[timed] test+stability-vit_b16: 40.58s
+  TEST vit_b16: AUROC=0.8234 F1=0.5981 latFIS=0.8986 outFIS=0.9550 lat=40.1ms
+
+====================================================================
+Backbone: clip_b32 (DeepHead)
+====================================================================
+/Users/hwangjeyeong/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/hwangjeyeong/Library/Python/3.9/lib/python/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+[timed] setup-clip_b32: 2.76s
+[timed] precompute-clean-clip_b32: 2.84s
+      e000 loss=0.6716 fi=0.0000 val=0.6760
+      e005 loss=0.1995 fi=0.0000 val=0.7189
+      e010 loss=0.1094 fi=0.0000 val=0.7261
+      e015 loss=0.0789 fi=0.0000 val=0.7170
+      e020 loss=0.0583 fi=0.0000 val=0.7210
+      e025 loss=0.0664 fi=0.0000 val=0.7392
+      e030 loss=0.0675 fi=0.0000 val=0.7146
+      early stop at 32
+  best val=0.7623 at epoch 17 in 1.1s
+[timed] test+stability-clip_b32: 5.40s
+  TEST clip_b32: AUROC=0.8352 F1=0.6475 latFIS=0.9448 outFIS=0.9510 lat=6.4ms
+
+====================================================================
+Backbone: dinov2 (DeepHead)
+====================================================================
+[timed] setup-dinov2: 0.89s
+[timed] precompute-clean-dinov2: 10.23s
+      e000 loss=0.5931 fi=0.0000 val=0.6019
+      e005 loss=0.1829 fi=0.0000 val=0.7518
+      e010 loss=0.1075 fi=0.0000 val=0.7412
+      e015 loss=0.0712 fi=0.0000 val=0.7375
+      e020 loss=0.0669 fi=0.0000 val=0.7426
+      e025 loss=0.0556 fi=0.0000 val=0.7212
+      e030 loss=0.0437 fi=0.0000 val=0.7303
+      e035 loss=0.0310 fi=0.0000 val=0.7462
+      early stop at 36
+  best val=0.7868 at epoch 21 in 1.2s
+[timed] test+stability-dinov2: 15.36s
+  TEST dinov2: AUROC=0.8786 F1=0.6955 latFIS=0.8856 outFIS=0.9529 lat=12.0ms
+
+====================================================================
+Backbone: ffal (DeepHead)
+====================================================================
+[timed] setup-ffal: 0.74s
+[timed] precompute-clean-ffal: 10.27s
+      precomputed views batch 0/23
+      precomputed views batch 5/23
+      precomputed views batch 10/23
+      precomputed views batch 15/23
+      precomputed views batch 20/23
+[timed] precompute-views-ffal: 37.87s
+  fi_views shape=(714, 4, 768)  lambda_fi=1.0
+      e000 loss=0.6253 fi=0.0843 val=0.6460
+      e005 loss=0.1945 fi=0.0469 val=0.7747
+      e010 loss=0.0991 fi=0.0317 val=0.7976
+      e015 loss=0.0814 fi=0.0284 val=0.7201
+      e020 loss=0.0571 fi=0.0220 val=0.7563
+      e025 loss=0.0565 fi=0.0275 val=0.7041
+      early stop at 29
+  best val=0.8147 at epoch 14 in 3.2s
+[timed] test+stability-ffal: 15.36s
+  TEST ffal: AUROC=0.8328 F1=0.5708 latFIS=0.8830 outFIS=0.9761 lat=11.9ms
+
+Wrote /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/results/baselines_enhanced.json

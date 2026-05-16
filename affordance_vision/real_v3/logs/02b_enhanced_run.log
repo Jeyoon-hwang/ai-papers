@@ -1,0 +1,59 @@
+
+====================================================================
+ENHANCED RUN  device=mps  backbones=['resnet50', 'vit_b16', 'clip_b32', 'dinov2', 'ffal']
+====================================================================
+epochs=80 batch=64 lr=0.001 wd=0.0001 patience=12 lambda_fi=0.5 n_views_fi=4
+loaded 1020 rows
+split: train=714 val=136 test=170
+
+====================================================================
+Backbone: resnet50 (enhanced)
+====================================================================
+[timed] backbone-resnet50 setup: 0.30s
+/Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/scripts/02b_train_enhanced.py:148: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  losses.append(float(loss))
+      epoch 000 loss=0.7188 val_AUROC=0.6523 lr=0.00100
+      epoch 001 loss=0.5922 val_AUROC=0.6162 lr=0.00100
+      epoch 002 loss=0.5099 val_AUROC=0.6584 lr=0.00100
+      epoch 003 loss=0.4513 val_AUROC=0.6520 lr=0.00099
+      epoch 004 loss=0.4167 val_AUROC=0.6875 lr=0.00099
+      epoch 005 loss=0.3651 val_AUROC=0.6682 lr=0.00099
+      epoch 006 loss=0.3259 val_AUROC=0.6987 lr=0.00098
+      epoch 007 loss=0.2999 val_AUROC=0.7144 lr=0.00098
+      epoch 008 loss=0.2835 val_AUROC=0.7560 lr=0.00097
+      epoch 009 loss=0.2461 val_AUROC=0.7162 lr=0.00096
+      epoch 010 loss=0.2260 val_AUROC=0.6723 lr=0.00095
+      epoch 011 loss=0.2135 val_AUROC=0.6614 lr=0.00095
+      epoch 012 loss=0.1966 val_AUROC=0.7244 lr=0.00094
+      epoch 013 loss=0.2104 val_AUROC=0.7540 lr=0.00093
+      epoch 014 loss=0.1881 val_AUROC=0.6350 lr=0.00092
+      epoch 015 loss=0.1659 val_AUROC=0.5863 lr=0.00091
+      epoch 016 loss=0.1517 val_AUROC=0.6282 lr=0.00089
+      epoch 017 loss=0.1532 val_AUROC=0.6309 lr=0.00088
+      epoch 018 loss=0.1699 val_AUROC=0.6076 lr=0.00087
+      epoch 019 loss=0.1475 val_AUROC=0.6421 lr=0.00086
+      epoch 020 loss=0.1528 val_AUROC=0.6343 lr=0.00084
+      early stop at epoch 20
+[timed] head-enhanced training (resnet50): 86.77s
+[timed] test+stability (resnet50 enhanced): 5.54s
+  TEST resnet50 (enhanced): AUROC=0.8338 F1=0.5914 latFIS=0.7924 outFIS=0.9637 lat=4.5ms train=86.8s
+
+====================================================================
+Backbone: vit_b16 (enhanced)
+====================================================================
+[timed] backbone-vit_b16 setup: 0.30s
+      epoch 000 loss=0.7479 val_AUROC=0.5960 lr=0.00100
+      epoch 001 loss=0.6226 val_AUROC=0.6561 lr=0.00100
+      epoch 002 loss=0.5503 val_AUROC=0.6223 lr=0.00100
+      epoch 003 loss=0.4687 val_AUROC=0.7153 lr=0.00099
+      epoch 004 loss=0.4184 val_AUROC=0.7191 lr=0.00099
+      epoch 005 loss=0.3644 val_AUROC=0.6983 lr=0.00099
+      epoch 006 loss=0.3349 val_AUROC=0.7319 lr=0.00098
+      epoch 007 loss=0.2979 val_AUROC=0.7172 lr=0.00098
+      epoch 008 loss=0.2795 val_AUROC=0.7521 lr=0.00097
+      epoch 009 loss=0.2703 val_AUROC=0.7332 lr=0.00096
+      epoch 010 loss=0.2306 val_AUROC=0.7196 lr=0.00095
+      epoch 011 loss=0.2222 val_AUROC=0.7225 lr=0.00095
+      epoch 012 loss=0.2035 val_AUROC=0.7106 lr=0.00094
+      epoch 013 loss=0.2014 val_AUROC=0.7236 lr=0.00093

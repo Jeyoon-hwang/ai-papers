@@ -1,0 +1,87 @@
+
+====================================================================
+v3.2 training  device=mps  backbones=['resnet50', 'vit_b16', 'clip_b32', 'dinov2', 'ffal']
+====================================================================
+epochs=200 batch=128 lr=0.001 wd=0.0001 patience=30 lambda_fi=0.5 n_views_fi=2
+loaded 10000 rows from /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/data/v32/affordances_v32.jsonl
+split: train=7000 val=1500 test=1500 objects: train=70 val=15 test=15
+
+====================================================================
+Backbone: resnet50 (v3.2 DeepResidualHead)
+====================================================================
+[timed] backbone-resnet50 setup: 0.28s
+      [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.7063 val_AUROC=0.7757 lr=0.00100
+      epoch 020 loss=0.3118 val_AUROC=0.8748 lr=0.00097
+      epoch 040 loss=0.4404 val_AUROC=0.8600 lr=0.00090
+      early stop at epoch 59 (best 0.8944 @ epoch 29)
+[timed] head-v32 training (resnet50): 123.61s
+[timed] test+stability (resnet50 v3.2): 48.05s
+  TEST resnet50 (v3.2): AUROC=0.8171 F1=0.6969 latFIS=0.7907 outFIS=0.9311 lat=3.4ms train=123.6s
+
+====================================================================
+Backbone: vit_b16 (v3.2 DeepResidualHead)
+====================================================================
+[timed] backbone-vit_b16 setup: 0.31s
+      [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.6949 val_AUROC=0.8239 lr=0.00100
+      epoch 020 loss=0.2619 val_AUROC=0.8555 lr=0.00097
+      epoch 040 loss=0.1629 val_AUROC=0.8770 lr=0.00090
+      epoch 060 loss=0.1309 val_AUROC=0.8648 lr=0.00079
+      epoch 080 loss=0.1151 val_AUROC=0.8507 lr=0.00065
+      early stop at epoch 83 (best 0.8799 @ epoch 53)
+[timed] head-v32 training (vit_b16): 588.66s
+[timed] test+stability (vit_b16 v3.2): 366.13s
+  TEST vit_b16 (v3.2): AUROC=0.8831 F1=0.6829 latFIS=0.9002 outFIS=0.9561 lat=39.7ms train=588.7s
+
+====================================================================
+Backbone: clip_b32 (v3.2 DeepResidualHead)
+====================================================================
+[timed] backbone-clip_b32 setup: 2.76s
+      [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.7143 val_AUROC=0.7694 lr=0.00100
+      epoch 020 loss=0.2734 val_AUROC=0.8617 lr=0.00097
+      epoch 040 loss=0.2305 val_AUROC=0.8600 lr=0.00090
+      early stop at epoch 47 (best 0.8758 @ epoch 17)
+[timed] head-v32 training (clip_b32): 110.12s
+[timed] test+stability (clip_b32 v3.2): 45.22s
+  TEST clip_b32 (v3.2): AUROC=0.8499 F1=0.6674 latFIS=0.9486 outFIS=0.9603 lat=3.9ms train=110.1s
+
+====================================================================
+Backbone: dinov2 (v3.2 DeepResidualHead)
+====================================================================
+[timed] backbone-dinov2 setup: 0.99s
+      [train] feature precompute pass 1/2 done
+      [train] feature precompute pass 2/2 done
+      [val] feature precompute pass 1/1 done
+      epoch 000 loss=0.6576 val_AUROC=0.8505 lr=0.00100
+      epoch 020 loss=0.1941 val_AUROC=0.8610 lr=0.00097
+      early stop at epoch 37 (best 0.9013 @ epoch 7)
+[timed] head-v32 training (dinov2): 237.60s
+[timed] test+stability (dinov2 v3.2): 136.41s
+  TEST dinov2 (v3.2): AUROC=0.8849 F1=0.7032 latFIS=0.8927 outFIS=0.9562 lat=11.8ms train=237.6s
+
+====================================================================
+Backbone: ffal (v3.2 DeepResidualHead)
+====================================================================
+[timed] backbone-ffal setup: 0.85s
+      [ffal-train] feature precompute pass 1/2 done
+      [ffal-train] feature precompute pass 2/2 done
+      [ffal-val] feature precompute pass 1/1 done
+      [ffal-fi-views] feature precompute pass 1/2 done
+      [ffal-fi-views] feature precompute pass 2/2 done
+      epoch 000 bce=0.8051 fi=0.1088 val_AUROC=0.7097
+      epoch 020 bce=0.3851 fi=0.0439 val_AUROC=0.8757
+      early stop at epoch 39 (best 0.9017 @ epoch 9)
+[timed] ffal-v32 training: 442.54s
+[timed] test+stability (ffal v3.2): 137.55s
+  TEST ffal (v3.2): AUROC=0.8509 F1=0.7053 latFIS=0.8932 outFIS=0.9630 lat=11.8ms train=442.5s
+
+Wrote /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/results/baselines_v32_10k.json  (total 37.4 min)
+Wrote /Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/results/baselines_v32_10k.md

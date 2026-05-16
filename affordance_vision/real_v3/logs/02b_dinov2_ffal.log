@@ -1,0 +1,55 @@
+
+====================================================================
+ENHANCED RUN  device=mps  backbones=['dinov2', 'ffal']
+====================================================================
+epochs=60 batch=64 lr=0.001 wd=0.0001 patience=10 lambda_fi=0.5 n_views_fi=4
+loaded 1020 rows
+split: train=714 val=136 test=170
+
+====================================================================
+Backbone: dinov2 (enhanced)
+====================================================================
+/Users/hwangjeyeong/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[timed] backbone-dinov2 setup: 1.27s
+/Users/hwangjeyeong/.openclaw/workspace/ai-papers-repo/affordance_vision/real_v3/scripts/02b_train_enhanced.py:148: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  losses.append(float(loss))
+      epoch 000 loss=0.7442 val_AUROC=0.5777 lr=0.00100
+      epoch 001 loss=0.5910 val_AUROC=0.6308 lr=0.00100
+      epoch 002 loss=0.5088 val_AUROC=0.6523 lr=0.00099
+      epoch 003 loss=0.4469 val_AUROC=0.6130 lr=0.00099
+      epoch 004 loss=0.3919 val_AUROC=0.6058 lr=0.00098
+      epoch 005 loss=0.3610 val_AUROC=0.6483 lr=0.00098
+      epoch 006 loss=0.3162 val_AUROC=0.6736 lr=0.00097
+      epoch 007 loss=0.2829 val_AUROC=0.7093 lr=0.00096
+      epoch 008 loss=0.2563 val_AUROC=0.7157 lr=0.00095
+      epoch 009 loss=0.2406 val_AUROC=0.7581 lr=0.00093
+      epoch 010 loss=0.2143 val_AUROC=0.7554 lr=0.00092
+      epoch 011 loss=0.1996 val_AUROC=0.7504 lr=0.00091
+      epoch 012 loss=0.1866 val_AUROC=0.7716 lr=0.00089
+      epoch 013 loss=0.1742 val_AUROC=0.7621 lr=0.00087
+      epoch 014 loss=0.1755 val_AUROC=0.7734 lr=0.00086
+      epoch 015 loss=0.1686 val_AUROC=0.7721 lr=0.00084
+      epoch 016 loss=0.1683 val_AUROC=0.7016 lr=0.00082
+      epoch 017 loss=0.1514 val_AUROC=0.7253 lr=0.00080
+      epoch 018 loss=0.1674 val_AUROC=0.6841 lr=0.00077
+      epoch 019 loss=0.1387 val_AUROC=0.7297 lr=0.00075
+      epoch 020 loss=0.1335 val_AUROC=0.7501 lr=0.00073
+      epoch 021 loss=0.1228 val_AUROC=0.7379 lr=0.00071
+      epoch 022 loss=0.1127 val_AUROC=0.7236 lr=0.00068
+      epoch 023 loss=0.1146 val_AUROC=0.6950 lr=0.00066
+      epoch 024 loss=0.1056 val_AUROC=0.7278 lr=0.00063
+      early stop at epoch 24
+[timed] head-enhanced training (dinov2): 282.35s
+[timed] test+stability (dinov2 enhanced): 15.73s
+  TEST dinov2 (enhanced): AUROC=0.7687 F1=0.5821 latFIS=0.8848 outFIS=0.9711 lat=14.7ms train=282.3s
+
+====================================================================
+Backbone: ffal (enhanced)
+====================================================================
+[timed] backbone-ffal setup: 0.82s
+      epoch 000 bce=0.6986 fi=0.1097 val_AUROC=0.7044
+      epoch 001 bce=0.5759 fi=0.1071 val_AUROC=0.7070
+      epoch 002 bce=0.5206 fi=0.1066 val_AUROC=0.7194
+      epoch 003 bce=0.4363 fi=0.1090 val_AUROC=0.7291

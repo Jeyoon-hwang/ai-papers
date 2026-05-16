@@ -1,0 +1,49 @@
+clean_ep=60 joint_ep=15 lambda_fi=0.6 n_views=6
+split: train=714 val=136 test=170
+      [clean] e000 loss=0.6081 val=0.5867
+      [clean] e001 loss=0.4221 val=0.7366
+      [clean] e002 loss=0.3323 val=0.7530
+      [clean] e003 loss=0.2747 val=0.7176
+      [clean] e004 loss=0.2260 val=0.7300
+      [clean] e005 loss=0.1999 val=0.7448
+      [clean] e006 loss=0.1670 val=0.7572
+      [clean] e007 loss=0.1455 val=0.7531
+      [clean] e008 loss=0.1228 val=0.7801
+      [clean] e009 loss=0.1195 val=0.7587
+      [clean] e010 loss=0.1058 val=0.7716
+      [clean] e011 loss=0.1081 val=0.7280
+      [clean] e012 loss=0.0860 val=0.7461
+      [clean] e013 loss=0.0811 val=0.7342
+      [clean] e014 loss=0.0847 val=0.7066
+      [clean] e015 loss=0.0798 val=0.7434
+      [clean] e016 loss=0.0737 val=0.7626
+      [clean] e017 loss=0.0648 val=0.7597
+      [clean] e018 loss=0.0691 val=0.7962
+      [clean] e019 loss=0.0633 val=0.7936
+      [clean] e020 loss=0.0583 val=0.7868
+      [clean] e021 loss=0.0550 val=0.7471
+      [clean] e022 loss=0.0508 val=0.7687
+      [clean] e023 loss=0.0502 val=0.7605
+      [clean] e024 loss=0.0545 val=0.7508
+      [clean] e025 loss=0.1698 val=0.7600
+      [clean] e026 loss=0.0803 val=0.7676
+      [clean] e027 loss=0.0675 val=0.7298
+      [clean] e028 loss=0.0556 val=0.8191
+      [clean] e029 loss=0.0495 val=0.8033
+      [clean] e030 loss=0.0482 val=0.7901
+      [clean] e031 loss=0.0422 val=0.7858
+      [clean] e032 loss=0.0480 val=0.7878
+      [clean] e033 loss=0.0401 val=0.7841
+      [clean] e034 loss=0.0393 val=0.7741
+      [clean] e035 loss=0.0456 val=0.7771
+      [clean] e036 loss=0.0377 val=0.7758
+      [clean] e037 loss=0.0388 val=0.7896
+      [clean] e038 loss=0.0427 val=0.7772
+      early stop at 38
+  phase 1 best val_AUROC=0.8191 at epoch 28 in 1.6s
+      [joint] e000 bce=0.0530 fi=0.1186 val=0.7747
+      [joint] e001 bce=0.0438 fi=0.1181 val=0.7803
+      [joint] e002 bce=0.0459 fi=0.1179 val=0.7638
+      [joint] e003 bce=0.0401 fi=0.1170 val=0.7609
+      [joint] e004 bce=0.0506 fi=0.1163 val=0.7150
+      [joint] e005 bce=0.0342 fi=0.1171 val=0.7734
